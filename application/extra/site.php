@@ -16,9 +16,7 @@ return array (
   'categorytype' => 
   array (
     'default' => 'Default',
-    'page' => 'Page',
-    'article' => 'Article',
-    'test' => 'Test',
+    'blog' => '博客',
   ),
   'configgroup' => 
   array (

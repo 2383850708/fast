@@ -18,9 +18,9 @@ return [
     // 应用命名空间
     'app_namespace'          => 'app',
     // 应用调试模式
-    'app_debug'              => Env::get('app.debug', false),
+    'app_debug'              => Env::get('app.debug', true),
     // 应用Trace
-    'app_trace'              => Env::get('app.trace', false),
+    'app_trace'              => Env::get('app.trace', true),
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -238,7 +238,7 @@ return [
         // 验证码图片宽度
         'imageW'   => 130,
         // 验证码位数
-        'length'   => 4,
+        'length'   => 1,
         // 验证成功后是否重置
         'reset'    => true
     ],
@@ -272,7 +272,7 @@ return [
         //自动检测更新
         'checkupdate'         => false,
         //版本号
-        'version'             => '1.0.0.20181210_beta',
+        'version'             => '1.0.0.20190111_beta',//1.0.0.20181210_beta
         //API接口地址
         'api_url'             => 'https://api.fastadmin.net',
     ],

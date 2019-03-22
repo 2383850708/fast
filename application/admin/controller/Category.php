@@ -21,7 +21,7 @@ class Category extends Backend
     protected $model = null;
     protected $categorylist = [];
     protected $noNeedRight = ['selectpage'];
-
+    protected $modelValidate = true;
     public function _initialize()
     {
         parent::_initialize();
@@ -78,10 +78,67 @@ class Category extends Backend
 
             $total = count($list);
             $result = array("total" => $total, "rows" => $list);
-
+			
             return json($result);
         }
         return $this->view->fetch();
+    }
+
+    public function add()
+    {
+         if ($this->request->isPost()) 
+         {
+            $params = $this->request->post("row/a");
+           
+            if ($params) {
+                if ($this->dataLimit && $this->dataLimitFieldAutoFill) {
+                    $params[$this->dataLimitField] = $this->auth->id;
+                }
+
+                try {
+                    //是否采用模型验证
+                    if ($this->modelValidate) {
+                        $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));
+                        $validate = is_bool($this->modelValidate) ? ($this->modelSceneValidate ? $name . '.add' : $name) : $this->modelValidate;
+                        $this->model->validate($validate);
+                    }
+                    $result = $this->model->allowField(true)->save($params);
+                    if ($result !== false) {
+                        $this->success();
+                    } else {
+                        $this->error($this->model->getError());
+                    }
+                } catch (\think\exception\PDOException $e) {
+                    $this->error($e->getMessage());
+                } catch (\think\Exception $e) {
+                    $this->error($e->getMessage());
+                }
+            }
+           
+            $this->error(__('Parameter %s can not be empty', ''));
+         }
+         else
+         {
+			
+			if(input('param.type'))
+			{
+				$this->view->assign("type", input('param.type'));
+			}
+			else
+			{
+				$this->view->assign("type", '');
+			}
+			
+            if(input('param.ids'))
+            {
+                $this->view->assign("pid", input('param.ids'));
+            }
+            else
+            {
+                $this->view->assign("pid", 0);
+            }
+            return $this->view->fetch();
+         }
     }
 
     /**

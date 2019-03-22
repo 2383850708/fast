@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:85:"G:\phpStudy\WWW\action\shop2018\public/../application/admin\view\shop\banner\add.html";i:1547198448;s:74:"G:\phpStudy\WWW\action\shop2018\application\admin\view\layout\default.html";i:1544409141;s:71:"G:\phpStudy\WWW\action\shop2018\application\admin\view\common\meta.html";i:1544409141;s:73:"G:\phpStudy\WWW\action\shop2018\application\admin\view\common\script.html";i:1544409141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:82:"G:\phpStudy\WWW\action\shop2018\public/../application/admin\view\category\add.html";i:1553245891;s:74:"G:\phpStudy\WWW\action\shop2018\application\admin\view\layout\default.html";i:1544409141;s:71:"G:\phpStudy\WWW\action\shop2018\application\admin\view\common\meta.html";i:1544409141;s:73:"G:\phpStudy\WWW\action\shop2018\application\admin\view\common\script.html";i:1544409141;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -53,47 +53,91 @@
                                 <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Title'); ?>:</label>
+        <label for="c-type" class="control-label col-xs-12 col-sm-2"><?php echo __('Type'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-title" class="form-control" name="row[title]" type="text">
+
+            <select id="c-type" data-rule="required" class="form-control selectpicker" name="row[type]">
+                <?php if(is_array($typeList) || $typeList instanceof \think\Collection || $typeList instanceof \think\Paginator): if( count($typeList)==0 ) : echo "" ;else: foreach($typeList as $key=>$vo): ?>
+                <option value="<?php echo $key; ?>" <?php if($key == $type): ?>selected="selected"<?php endif; ?>><?php echo $vo; ?></option>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </select>
+
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Image'); ?>:</label>
+        <label for="c-pid" class="control-label col-xs-12 col-sm-2"><?php echo __('Pid'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <select id="c-pid" data-rule="required" class="form-control selectpicker" name="row[pid]">
+                <?php if(is_array($parentList) || $parentList instanceof \think\Collection || $parentList instanceof \think\Paginator): if( count($parentList)==0 ) : echo "" ;else: foreach($parentList as $key=>$vo): ?>
+                <option data-type="<?php echo $vo['type']; ?>" value="<?php echo $key; ?>"  <?php if($key == $pid): ?>selected="selected"<?php endif; ?>><?php echo $vo['name']; ?></option>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-name" class="control-label col-xs-12 col-sm-2"><?php echo __('Name'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-nickname" class="control-label col-xs-12 col-sm-2"><?php echo __('Nickname'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-nickname" data-rule="required" class="form-control" name="row[nickname]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-flag" class="control-label col-xs-12 col-sm-2"><?php echo __('Flag'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+
+            <select  id="c-flag" class="form-control selectpicker" multiple="" name="row[flag][]">
+                <?php if(is_array($flagList) || $flagList instanceof \think\Collection || $flagList instanceof \think\Paginator): if( count($flagList)==0 ) : echo "" ;else: foreach($flagList as $key=>$vo): ?>
+                <option value="<?php echo $key; ?>" <?php if(in_array(($key), explode(',',""))): ?>selected<?php endif; ?>><?php echo $vo; ?></option>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-image" class="control-label col-xs-12 col-sm-2"><?php echo __('Image'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
-                <input id="c-image" class="form-control" size="50" name="row[image]" type="text">
+                <input id="c-image" class="form-control" size="50" name="row[image]" type="text" value="">
                 <div class="input-group-addon no-border no-padding">
                     <span><button type="button" id="plupload-image" class="btn btn-danger plupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
                     <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
                 </div>
-                <span class="msg-box n-right" for="c-image"></span>
+                <span class="msg-box n-right"></span>
             </div>
             <ul class="row list-inline plupload-preview" id="p-image"></ul>
         </div>
     </div>
-
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Url'); ?>:</label>
+        <label for="c-keywords" class="control-label col-xs-12 col-sm-2"><?php echo __('Keywords'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-rul" class="form-control input-sm" name="row[url]" type="text">
+            <input id="c-keywords" class="form-control" name="row[keywords]" type="text" value="">
         </div>
     </div>
-
     <div class="form-group">
-        <label for="remark" class="control-label col-xs-12 col-sm-2"><?php echo __('Content'); ?>:</label>
+        <label for="c-description" class="control-label col-xs-12 col-sm-2"><?php echo __('Description'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <textarea class="form-control editor"  name="row[contents]"></textarea>
+            <textarea id="c-description" class="form-control" name="row[description]"></textarea>
         </div>
     </div>
-
+    <div class="form-group">
+        <label for="c-weigh" class="control-label col-xs-12 col-sm-2"><?php echo __('Weigh'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-weigh" class="form-control" name="row[weigh]" type="number" value="0">
+        </div>
+    </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <?php echo build_radios('row[status]', ['normal'=>__('Normal'), 'hidden'=>__('Hidden')]); ?>
         </div>
     </div>
-
     <div class="form-group layer-footer">
         <label class="control-label col-xs-12 col-sm-2"></label>
         <div class="col-xs-12 col-sm-8">
