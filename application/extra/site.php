@@ -1,8 +1,8 @@
 <?php
 
 return array (
-  'name' => 'FastAdmin',
-  'beian' => '',
+  'name' => '温远坤',
+  'beian' => '粤ICP备15054802号-4',
   'cdnurl' => '',
   'version' => '1.0.1',
   'timezone' => 'Asia/Shanghai',

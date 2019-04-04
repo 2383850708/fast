@@ -1,0 +1,2310 @@
+---------------------------------------------------------------
+[ 2019-04-01T17:55:33+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/28?dialog=1
+[运行时间：1.109111s] [吞吐率：0.90req/s] [内存消耗：3,226.34kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000166s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010349s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=73',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/28?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '271',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '25',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '<p>2</p>',
+    'author' => '2',
+    'keyword' => 'php,ceshi',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '28',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '28',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004827s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.132245s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.075891s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.087200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.076472s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.155567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.077064s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.076425s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.077242s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.076623s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 28 LIMIT 1 [ RunTime:0.076664s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `title`='3',`hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554112533  WHERE  `id` = 28 [ RunTime:0.076325s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:55:54+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/28?dialog=1
+[运行时间：1.063577s] [吞吐率：0.94req/s] [内存消耗：3,276.57kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005867s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=73',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/28?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '271',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '25',
+    'title' => '4',
+    'summary' => '2',
+    'content' => '<p>2</p>',
+    'author' => '2',
+    'keyword' => 'php,ceshi',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '28',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '28',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003628s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.139179s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000762s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097717s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.064411s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.064674s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.064818s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.127085s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.063474s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.062739s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.064469s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.063690s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '4'  AND `id` <> 28 LIMIT 1 [ RunTime:0.063551s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `title`='4',`hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554112553  WHERE  `id` = 28 [ RunTime:0.063425s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.064582s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('博客管理 文章管理 编辑' , '{\"dialog\":\"1\",\"row\":{\"category_id\":\"25\",\"title\":\"4\",\"summary\":\"2\",\"content\":\"<p>2<\\/p>\",\"author\":\"2\",\"keyword\":\"php,ceshi\",\"hits\":\"0\",\"image\":\"\",\"pageviews\":\"0\",\"weigh\":\"0\",\"status\":\"normal\",\"id\":\"28\",\"flag\":[\"\"]},\"ids\":\"28\"}' , '/admin/blog/article/edit/ids/28?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' , '127.0.0.1' , 1554112553) [ RunTime:0.072294s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:55:55+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/blog/article/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1554110710643
+[运行时间：0.954622s] [吞吐率：1.05req/s] [内存消耗：3,380.53kb] [文件加载：90]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005653s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=73',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1554110710643',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003520s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->index[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000733s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000757s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097082s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.064974s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.065749s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.065103s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.130155s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.065514s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.065776s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.066564s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.066982s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_article` `article` LEFT JOIN `fa_admin` `admin` ON `article`.`create_id`=`admin`.`id` LEFT JOIN `fa_category` `category` ON `article`.`category_id`=`category`.`id` ORDER BY `article`.`id` DESC LIMIT 1 [ RunTime:0.065530s ]
+[ sql ] [ SQL ] SELECT `article`.`id`,`article`.`category_id`,`article`.`title`,`article`.`summary`,`article`.`content`,`article`.`author`,`article`.`flag`,`article`.`keyword`,`article`.`hits`,`article`.`thumbimage`,`article`.`pageviews`,`article`.`comment_count`,`article`.`status`,`article`.`weigh`,`article`.`create_id`,`article`.`update_id`,`article`.`createtime`,`article`.`updatetime`,admin.id AS admin__id,admin.username AS admin__username,admin.nickname AS admin__nickname,admin.password AS admin__password,admin.salt AS admin__salt,admin.avatar AS admin__avatar,admin.email AS admin__email,admin.loginfailure AS admin__loginfailure,admin.logintime AS admin__logintime,admin.createtime AS admin__createtime,admin.updatetime AS admin__updatetime,admin.token AS admin__token,admin.status AS admin__status,category.id AS category__id,category.pid AS category__pid,category.type AS category__type,category.name AS category__name,category.nickname AS category__nickname,category.flag AS category__flag,category.image AS category__image,category.keywords AS category__keywords,category.description AS category__description,category.diyname AS category__diyname,category.createtime AS category__createtime,category.updatetime AS category__updatetime,category.weigh AS category__weigh,category.status AS category__status FROM `fa_article` `article` LEFT JOIN `fa_admin` `admin` ON `article`.`create_id`=`admin`.`id` LEFT JOIN `fa_category` `category` ON `article`.`category_id`=`category`.`id` ORDER BY `article`.`id` DESC LIMIT 0,10 [ RunTime:0.070184s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:57:04+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/blog/article
+[运行时间：0.753517s] [吞吐率：1.33req/s] [内存消耗：3,262.49kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005904s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=73',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003913s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->index[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ VIEW ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\view\blog\article\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'parentList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000769s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000711s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099724s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.065697s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.066148s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.065825s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.132056s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.069769s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.065754s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'blog/article' LIMIT 1 [ RunTime:0.064821s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:57:05+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/bootstrap.css.map
+[运行时间：0.056591s] [吞吐率：17.67req/s] [内存消耗：1,625.45kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006206s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.006438s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:05+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/fastadmin.css.map
+[运行时间：0.060633s] [吞吐率：16.49req/s] [内存消耗：1,625.45kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008757s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.007044s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:05+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/skins/skin-green.css.map
+[运行时间：0.083575s] [吞吐率：11.97req/s] [内存消耗：1,625.40kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007469s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.006172s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:06+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/backend.css.map
+[运行时间：0.056331s] [吞吐率：17.75req/s] [内存消耗：1,625.41kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007355s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.005929s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:06+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/ajax/lang?callback=define&controllername=blog.article&v=1554112623
+[运行时间：0.076487s] [吞吐率：13.07req/s] [内存消耗：2,418.29kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004397s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'blog.article',
+  'v' => '1554112623',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002799s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000835s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000770s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:07+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/blog/article/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1554112625123
+[运行时间：1.075952s] [吞吐率：0.93req/s] [内存消耗：3,380.53kb] [文件加载：90]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006004s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1554112625123',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004566s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->index[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001009s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000913s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.152646s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.064989s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.065471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.065251s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.131134s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.067935s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.064792s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.067322s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.066953s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_article` `article` LEFT JOIN `fa_admin` `admin` ON `article`.`create_id`=`admin`.`id` LEFT JOIN `fa_category` `category` ON `article`.`category_id`=`category`.`id` ORDER BY `article`.`id` DESC LIMIT 1 [ RunTime:0.065408s ]
+[ sql ] [ SQL ] SELECT `article`.`id`,`article`.`category_id`,`article`.`title`,`article`.`summary`,`article`.`content`,`article`.`author`,`article`.`flag`,`article`.`keyword`,`article`.`hits`,`article`.`thumbimage`,`article`.`pageviews`,`article`.`comment_count`,`article`.`status`,`article`.`weigh`,`article`.`create_id`,`article`.`update_id`,`article`.`createtime`,`article`.`updatetime`,admin.id AS admin__id,admin.username AS admin__username,admin.nickname AS admin__nickname,admin.password AS admin__password,admin.salt AS admin__salt,admin.avatar AS admin__avatar,admin.email AS admin__email,admin.loginfailure AS admin__loginfailure,admin.logintime AS admin__logintime,admin.createtime AS admin__createtime,admin.updatetime AS admin__updatetime,admin.token AS admin__token,admin.status AS admin__status,category.id AS category__id,category.pid AS category__pid,category.type AS category__type,category.name AS category__name,category.nickname AS category__nickname,category.flag AS category__flag,category.image AS category__image,category.keywords AS category__keywords,category.description AS category__description,category.diyname AS category__diyname,category.createtime AS category__createtime,category.updatetime AS category__updatetime,category.weigh AS category__weigh,category.status AS category__status FROM `fa_article` `article` LEFT JOIN `fa_admin` `admin` ON `article`.`create_id`=`admin`.`id` LEFT JOIN `fa_category` `category` ON `article`.`category_id`=`category`.`id` ORDER BY `article`.`id` DESC LIMIT 0,10 [ RunTime:0.067511s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:57:12+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/blog/article/add?dialog=1
+[运行时间：0.678768s] [吞吐率：1.47req/s] [内存消耗：3,266.70kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007989s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004496s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->add[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ VIEW ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\view\blog\article\add.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'parentList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000681s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000673s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096774s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.065609s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.064871s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.065432s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.129348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.065468s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.063274s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:57:12+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/backend.css.map
+[运行时间：0.054366s] [吞吐率：18.39req/s] [内存消耗：1,625.41kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005210s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.005754s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:12+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/ajax/lang?callback=define&controllername=blog.article&v=1554112631
+[运行时间：0.080942s] [吞吐率：12.35req/s] [内存消耗：2,418.30kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009736s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/add?dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'blog.article',
+  'v' => '1554112631',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002512s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000659s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000604s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:13+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/bootstrap.css.map
+[运行时间：0.056464s] [吞吐率：17.71req/s] [内存消耗：1,625.45kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000060s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004838s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.007467s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:13+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/fastadmin.css.map
+[运行时间：0.065714s] [吞吐率：15.22req/s] [内存消耗：1,625.45kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000189s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005735s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.005865s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:13+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/skins/skin-green.css.map
+[运行时间：0.063590s] [吞吐率：15.73req/s] [内存消耗：1,625.40kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000173s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008606s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.007182s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:28+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/add?dialog=1
+[运行时间：1.402310s] [吞吐率：0.71req/s] [内存消耗：3,280.31kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008430s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/add?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '243',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php,ceshi',
+    'hits' => '0',
+    'thumbimage' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.006415s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->add[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.142768s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000680s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.121549s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.064631s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.065948s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.065389s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.131220s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.065520s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.065620s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.065681s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3' LIMIT 1 [ RunTime:0.064584s ]
+[ sql ] [ SQL ] INSERT INTO `fa_article` (`category_id` , `title` , `summary` , `content` , `author` , `keyword` , `hits` , `thumbimage` , `pageviews` , `weigh` , `status` , `flag` , `create_id` , `createtime` , `updatetime`) VALUES (26 , '3' , '2' , '' , '2' , 'php,ceshi' , 0 , '' , 0 , 0 , 'normal' , '' , 1 , 1554112647 , 1554112647) [ RunTime:0.066328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tag` [ RunTime:0.064810s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tag` WHERE  `name` = 'php' LIMIT 1 [ RunTime:0.064208s ]
+[ sql ] [ SQL ] INSERT INTO `fa_tag` (`name` , `num`) VALUES ('php' , 1) [ RunTime:0.065452s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tag` WHERE  `name` = 'ceshi' LIMIT 1 [ RunTime:0.064556s ]
+[ sql ] [ SQL ] INSERT INTO `fa_tag` (`name` , `num`) VALUES ('ceshi' , 1) [ RunTime:0.064371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.067201s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('博客管理 文章管理 文章添加' , '{\"dialog\":\"1\",\"row\":{\"category_id\":\"26\",\"title\":\"3\",\"summary\":\"2\",\"content\":\"\",\"author\":\"2\",\"keyword\":\"php,ceshi\",\"hits\":\"0\",\"thumbimage\":\"\",\"pageviews\":\"0\",\"weigh\":\"0\",\"status\":\"normal\",\"flag\":[\"\"]}}' , '/admin/blog/article/add?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' , '127.0.0.1' , 1554112647) [ RunTime:0.073063s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:57:29+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/blog/article/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1554112625124
+[运行时间：1.133616s] [吞吐率：0.88req/s] [内存消耗：3,382.28kb] [文件加载：90]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006276s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1554112625124',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003562s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->index[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000869s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000543s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.128486s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.076690s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.075908s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.078927s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.152220s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.076302s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.075666s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.076161s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.078297s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_article` `article` LEFT JOIN `fa_admin` `admin` ON `article`.`create_id`=`admin`.`id` LEFT JOIN `fa_category` `category` ON `article`.`category_id`=`category`.`id` ORDER BY `article`.`id` DESC LIMIT 1 [ RunTime:0.078911s ]
+[ sql ] [ SQL ] SELECT `article`.`id`,`article`.`category_id`,`article`.`title`,`article`.`summary`,`article`.`content`,`article`.`author`,`article`.`flag`,`article`.`keyword`,`article`.`hits`,`article`.`thumbimage`,`article`.`pageviews`,`article`.`comment_count`,`article`.`status`,`article`.`weigh`,`article`.`create_id`,`article`.`update_id`,`article`.`createtime`,`article`.`updatetime`,admin.id AS admin__id,admin.username AS admin__username,admin.nickname AS admin__nickname,admin.password AS admin__password,admin.salt AS admin__salt,admin.avatar AS admin__avatar,admin.email AS admin__email,admin.loginfailure AS admin__loginfailure,admin.logintime AS admin__logintime,admin.createtime AS admin__createtime,admin.updatetime AS admin__updatetime,admin.token AS admin__token,admin.status AS admin__status,category.id AS category__id,category.pid AS category__pid,category.type AS category__type,category.name AS category__name,category.nickname AS category__nickname,category.flag AS category__flag,category.image AS category__image,category.keywords AS category__keywords,category.description AS category__description,category.diyname AS category__diyname,category.createtime AS category__createtime,category.updatetime AS category__updatetime,category.weigh AS category__weigh,category.status AS category__status FROM `fa_article` `article` LEFT JOIN `fa_admin` `admin` ON `article`.`create_id`=`admin`.`id` LEFT JOIN `fa_category` `category` ON `article`.`category_id`=`category`.`id` ORDER BY `article`.`id` DESC LIMIT 0,10 [ RunTime:0.078430s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:57:35+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.722944s] [吞吐率：1.38req/s] [内存消耗：3,281.98kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008767s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.007183s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ VIEW ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\view\blog\article\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'parentList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000764s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000533s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084537s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.055379s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.055878s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.056288s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.113918s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.057697s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.057197s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.055867s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.057025s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:57:36+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/backend.css.map
+[运行时间：0.051573s] [吞吐率：19.39req/s] [内存消耗：1,625.41kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007627s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.004818s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:36+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/fastadmin.css.map
+[运行时间：0.052037s] [吞吐率：19.22req/s] [内存消耗：1,625.45kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005980s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.007397s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:36+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/skins/skin-green.css.map
+[运行时间：0.058107s] [吞吐率：17.21req/s] [内存消耗：1,625.40kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007668s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.006363s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:36+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/bootstrap.css.map
+[运行时间：0.323903s] [吞吐率：3.09req/s] [内存消耗：1,625.45kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000080s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.082824s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.005416s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:36+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/ajax/lang?callback=define&controllername=blog.article&v=1554112655
+[运行时间：0.112894s] [吞吐率：8.86req/s] [内存消耗：2,418.32kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018756s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'blog.article',
+  'v' => '1554112655',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002506s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000658s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000897s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:57:57+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：1.148534s] [吞吐率：0.87req/s] [内存消耗：3,276.60kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007396s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003425s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.143266s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.001009s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.127594s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.067233s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.064724s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.065989s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.131125s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.066541s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.066127s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.065966s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.066281s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 29 LIMIT 1 [ RunTime:0.065394s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `keyword`='php',`hits`=0,`pageviews`=0,`weigh`=0,`update_id`=1,`updatetime`=1554112676  WHERE  `id` = 29 [ RunTime:0.067657s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.066204s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('博客管理 文章管理 编辑' , '{\"dialog\":\"1\",\"row\":{\"category_id\":\"26\",\"title\":\"3\",\"summary\":\"2\",\"content\":\"\",\"author\":\"2\",\"keyword\":\"php\",\"hits\":\"0\",\"image\":\"\",\"pageviews\":\"0\",\"weigh\":\"0\",\"status\":\"normal\",\"id\":\"29\",\"flag\":[\"\"]},\"ids\":\"29\"}' , '/admin/blog/article/edit/ids/29?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' , '127.0.0.1' , 1554112677) [ RunTime:0.073919s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:57:58+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/blog/article/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1554112625125
+[运行时间：0.969547s] [吞吐率：1.03req/s] [内存消耗：3,382.27kb] [文件加载：90]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009453s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1554112625125',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005268s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->index[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001109s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.001043s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098784s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.065555s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.064652s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.068022s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.127200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.064805s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.063856s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.064171s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.064405s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_article` `article` LEFT JOIN `fa_admin` `admin` ON `article`.`create_id`=`admin`.`id` LEFT JOIN `fa_category` `category` ON `article`.`category_id`=`category`.`id` ORDER BY `article`.`id` DESC LIMIT 1 [ RunTime:0.064606s ]
+[ sql ] [ SQL ] SELECT `article`.`id`,`article`.`category_id`,`article`.`title`,`article`.`summary`,`article`.`content`,`article`.`author`,`article`.`flag`,`article`.`keyword`,`article`.`hits`,`article`.`thumbimage`,`article`.`pageviews`,`article`.`comment_count`,`article`.`status`,`article`.`weigh`,`article`.`create_id`,`article`.`update_id`,`article`.`createtime`,`article`.`updatetime`,admin.id AS admin__id,admin.username AS admin__username,admin.nickname AS admin__nickname,admin.password AS admin__password,admin.salt AS admin__salt,admin.avatar AS admin__avatar,admin.email AS admin__email,admin.loginfailure AS admin__loginfailure,admin.logintime AS admin__logintime,admin.createtime AS admin__createtime,admin.updatetime AS admin__updatetime,admin.token AS admin__token,admin.status AS admin__status,category.id AS category__id,category.pid AS category__pid,category.type AS category__type,category.name AS category__name,category.nickname AS category__nickname,category.flag AS category__flag,category.image AS category__image,category.keywords AS category__keywords,category.description AS category__description,category.diyname AS category__diyname,category.createtime AS category__createtime,category.updatetime AS category__updatetime,category.weigh AS category__weigh,category.status AS category__status FROM `fa_article` `article` LEFT JOIN `fa_admin` `admin` ON `article`.`create_id`=`admin`.`id` LEFT JOIN `fa_category` `category` ON `article`.`category_id`=`category`.`id` ORDER BY `article`.`id` DESC LIMIT 0,10 [ RunTime:0.066455s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:58:59+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.790560s] [吞吐率：1.26req/s] [内存消耗：3,281.97kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007876s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004797s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ VIEW ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\view\blog\article\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'parentList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000831s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000630s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098557s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.064077s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.065055s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.064993s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.129504s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.064059s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.063907s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.064641s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.065532s ]
+---------------------------------------------------------------
+[ 2019-04-01T17:58:59+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/backend.css.map
+[运行时间：0.047589s] [吞吐率：21.01req/s] [内存消耗：1,625.41kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005484s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.005139s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:58:59+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/bootstrap.css.map
+[运行时间：0.053940s] [吞吐率：18.54req/s] [内存消耗：1,625.45kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005006s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.003976s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:58:59+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/fastadmin.css.map
+[运行时间：0.056965s] [吞吐率：17.55req/s] [内存消耗：1,625.45kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005929s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.009127s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:58:59+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/assets/css/skins/skin-green.css.map
+[运行时间：0.086683s] [吞吐率：11.54req/s] [内存消耗：1,625.40kb] [文件加载：57]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007457s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.031360s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:58:59+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/admin/ajax/lang?callback=define&controllername=blog.article&v=1554112738
+[运行时间：0.089184s] [吞吐率：11.21req/s] [内存消耗：2,418.32kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005242s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'blog.article',
+  'v' => '1554112738',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003168s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000686s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000585s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-01T17:59:16+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.960911s] [吞吐率：1.04req/s] [内存消耗：3,282.69kb] [文件加载：91]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008755s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002665s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.121597s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000743s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086576s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.054835s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.055984s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.054552s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.110462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.055635s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.056960s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.054986s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.054608s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 29 LIMIT 1 [ RunTime:0.053900s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `keyword`='php',`hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554112756  WHERE  `id` = 29 [ RunTime:0.053894s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.053929s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('博客管理 文章管理 编辑' , '{\"dialog\":\"1\",\"row\":{\"category_id\":\"26\",\"title\":\"3\",\"summary\":\"2\",\"content\":\"\",\"author\":\"2\",\"keyword\":\"php\",\"hits\":\"0\",\"image\":\"\",\"pageviews\":\"0\",\"weigh\":\"0\",\"status\":\"normal\",\"id\":\"29\",\"flag\":[\"\"]},\"ids\":\"29\"}' , '/admin/blog/article/edit/ids/29?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' , '127.0.0.1' , 1554112756) [ RunTime:0.065352s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:02:59+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：1.116552s] [吞吐率：0.90req/s] [内存消耗：3,289.64kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008205s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003349s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ VIEW ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\view\blog\article\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'parentList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.140802s ]
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.000895s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110469s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.065984s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.066152s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.067625s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.132633s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.064813s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.066106s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.066274s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.066345s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 29 LIMIT 1 [ RunTime:0.065250s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554112979  WHERE  `id` = 29 [ RunTime:0.065389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.066233s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('博客管理 文章管理 编辑' , '{\"dialog\":\"1\",\"row\":{\"category_id\":\"26\",\"title\":\"3\",\"summary\":\"2\",\"content\":\"\",\"author\":\"2\",\"keyword\":\"php\",\"hits\":\"0\",\"image\":\"\",\"pageviews\":\"0\",\"weigh\":\"0\",\"status\":\"normal\",\"id\":\"29\",\"flag\":[\"\"]},\"ids\":\"29\"}' , '/admin/blog/article/edit/ids/29?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' , '127.0.0.1' , 1554112979) [ RunTime:0.072193s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:03:16+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.845570s] [吞吐率：1.18req/s] [内存消耗：3,225.56kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009098s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003157s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086988s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.057359s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.053896s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.054814s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.110830s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.057579s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.055946s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.055402s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.056094s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 29 LIMIT 1 [ RunTime:0.054983s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554112996  WHERE  `id` = 29 [ RunTime:0.055083s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:03:42+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.812875s] [吞吐率：1.23req/s] [内存消耗：3,239.87kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006773s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003189s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086283s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.054623s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.057115s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.054586s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.107810s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.053877s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.054043s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.053896s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.053567s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 29 LIMIT 1 [ RunTime:0.051948s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554113022  WHERE  `id` = 29 [ RunTime:0.059574s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:04:02+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.942114s] [吞吐率：1.06req/s] [内存消耗：3,240.48kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.011344s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.006584s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100984s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.065623s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.066450s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.064408s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.130632s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.066732s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.066662s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.065199s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.066672s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 29 LIMIT 1 [ RunTime:0.064611s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554113042  WHERE  `id` = 29 [ RunTime:0.065349s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:04:28+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.935239s] [吞吐率：1.07req/s] [内存消耗：3,240.48kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007344s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004945s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096308s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.065995s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.064499s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.064849s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.129994s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.065721s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.063897s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.064728s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.064578s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 29 LIMIT 1 [ RunTime:0.064160s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554113068  WHERE  `id` = 29 [ RunTime:0.065269s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:04:47+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：1.056025s] [吞吐率：0.95req/s] [内存消耗：3,241.10kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.012319s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003678s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112800s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.074448s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.075638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.074313s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.150822s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.074375s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.075758s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.074506s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.075801s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_article` WHERE  `title` = '3'  AND `id` <> 29 LIMIT 1 [ RunTime:0.074459s ]
+[ sql ] [ SQL ] UPDATE `fa_article`  SET `keyword`='php',`hits`=0,`pageviews`=0,`weigh`=0,`updatetime`=1554113087  WHERE  `id` = 29 [ RunTime:0.074301s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:05:45+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.898389s] [吞吐率：1.11req/s] [内存消耗：3,273.33kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000279s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.012554s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012399s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.114178s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.064058s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.063498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.064599s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.126471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.064028s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.062769s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.064136s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.063758s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:06:07+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.937957s] [吞吐率：1.07req/s] [内存消耗：3,273.33kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008141s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004690s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112450s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.075679s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.082994s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.074615s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.150207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.074991s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.073802s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.074083s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.074618s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:06:39+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.907652s] [吞吐率：1.10req/s] [内存消耗：3,273.33kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004959s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004610s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.115781s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.075967s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.075803s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.076799s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.152286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.076797s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.076490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.076952s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.076564s ]
+---------------------------------------------------------------
+[ 2019-04-01T18:09:05+08:00 ] 127.0.0.1 POST www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1
+[运行时间：0.819108s] [吞吐率：1.22req/s] [内存消耗：3,273.63kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007774s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'blog.article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1553564032,1553760466,1553823534,1554082064; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1554082064; PHPSESSID=distprart1jq7q4a43t2qj1hj3; monitor_count=74',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.shop2018.com:8081/admin/blog/article/edit/ids/29?dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.shop2018.com:8081',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '245',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'row' => 
+  array (
+    'category_id' => '26',
+    'title' => '3',
+    'summary' => '2',
+    'content' => '',
+    'author' => '2',
+    'keyword' => 'php',
+    'hits' => '0',
+    'image' => '',
+    'pageviews' => '0',
+    'weigh' => '0',
+    'status' => 'normal',
+    'id' => '29',
+    'flag' => 
+    array (
+      0 => '',
+    ),
+  ),
+  'ids' => '29',
+)
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003143s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\public/../application/admin/lang/zh-cn/blog/article.php
+[ info ] [ RUN ] app\admin\controller\blog\Article->edit[ G:\phpStudy\WWW\action\shop2018\application\admin\controller\blog\Article.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.104001s ] mysql:host=bdm114585572.my3w.com;port=3306;dbname=bdm114585572_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.066653s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.067794s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.067792s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.134147s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.066454s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`pid`,`type`,`flag` FROM `fa_category` WHERE  `type` = 'blog' ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.066981s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_article` [ RunTime:0.068999s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_article` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.066182s ]

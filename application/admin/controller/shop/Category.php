@@ -29,7 +29,7 @@ class Category extends Backend
         $tree = Tree::instance();
         $tree->init(collection($this->model->order('weigh desc,id desc')->select())->toArray(), 'pid');
         $this->categorylist = $tree->getTreeList($tree->getTreeArray(0), 'title');
-        $categorydata = [0 => ['type' => 'all', 'title' => __('Toplevel'),'id'=>0]];
+        $categorydata = [0 => ['type' => 'type', 'title' => 'title','id'=>0]];
         foreach ($this->categorylist as $k => $v)
         {
             $categorydata[$v['id']] = $v;
