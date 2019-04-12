@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"G:\phpStudy\WWW\action\shop2018\public/../application/index\view\index\index.html";i:1554714963;}*/ ?>
 ﻿<!doctype html>
 <html>
 <head>
@@ -24,19 +25,17 @@
     <nav class="nav" id="topnav">
       <h1 class="logo"><a href="http://www.yangqq.com">杨青博客</a></h1>
 	  
-		{present name="categorydata"}
-			{volist name="categorydata" id="vo"}
-				<li><a href="index.html">{$vo.name}</a> 
-				{present name="$vo.child"}
+		<?php if(isset($categorydata)): if(is_array($categorydata) || $categorydata instanceof \think\Collection || $categorydata instanceof \think\Paginator): $i = 0; $__LIST__ = $categorydata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+				<li><a href="index.html"><?php echo $vo['name']; ?></a> 
+				<?php if(isset($vo['child'])): ?>
 					<ul class="sub-nav">
-					{volist name="vo.child" id="v"}
-						 <li><a href="life.html">{$v.name}</a></li>
-					{/volist}
+					<?php if(is_array($vo['child']) || $vo['child'] instanceof \think\Collection || $vo['child'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['child'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+						 <li><a href="life.html"><?php echo $v['name']; ?></a></li>
+					<?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
-				{/present}
+				<?php endif; ?>
 				</li>
-			{/volist}
-		{/present}
+			<?php endforeach; endif; else: echo "" ;endif; endif; ?>
 	  
       <!-- <li><a href="index.html">网站首页</a> </li>
       <li><a href="about.html">关于我</a> </li>

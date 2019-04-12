@@ -7,6 +7,8 @@ use think\Config;
 use think\Controller;
 use think\Hook;
 use think\Lang;
+use think\Cache;
+use fast\Category;
 
 /**
  * 前台控制器基类
@@ -51,7 +53,7 @@ class Frontend extends Controller
             $this->view->engine->layout('layout/' . $this->layout);
         }
         $this->auth = Auth::instance();
-
+		
         // token
         $token = $this->request->server('HTTP_TOKEN', $this->request->request('token', \think\Cookie::get('token')));
 
@@ -105,9 +107,33 @@ class Frontend extends Controller
         ];
         $config = array_merge($config, Config::get("view_replace_str"));
 
-        Config::set('upload', array_merge(Config::get('upload'), $upload));
+		if(Cache::get('category',''))
+		{
+			$category = model('app\common\model\Category');
+			$condition = [];
+			$condition['type'] = 'blog';
 
+			$dataList = collection($category->where($condition)->order('weigh desc,id desc')->field('id,name,pid,type,flag')->select())->toArray();
+			
+			$Category = new Category($dataList);
+			$CategoryList = $Category->leaf();
+			
+			Cache::set('category',$CategoryList,3600);
+			$categorydata = Cache::get('category','');
+
+		}
+		else
+		{
+			$categorydata = Cache::get('category','');
+			
+		}
+		
+		$this->assign('categorydata',$categorydata);
+				
+        Config::set('upload', array_merge(Config::get('upload'), $upload));
+		
         // 配置信息后
+		
         Hook::listen("config_init", $config);
         // 加载当前控制器语言包
         $this->loadlang($controllername);

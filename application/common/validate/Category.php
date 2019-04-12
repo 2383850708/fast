@@ -31,6 +31,10 @@ class Category extends Validate
         $condition['type'] = $data['type'];
         $condition['name'] = $data['name'];
         $condition['pid'] = $data['pid'];
+		if(isset($data['id']))
+		{
+			$condition['id'] = array('neq',$data['id']);
+		}
         $id =  Db::name('category')->where($condition)->value('id');
         if($id)
         {

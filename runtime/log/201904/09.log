@@ -1,0 +1,28 @@
+---------------------------------------------------------------
+[ 2019-04-09T17:33:19+08:00 ] 127.0.0.1 GET www.shop2018.com:8081/favicon.ico
+[运行时间：0.458582s] [吞吐率：2.18req/s] [内存消耗：1,617.86kb] [文件加载：56]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006977s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.028524s ]
+[ info ] [ LANG ] G:\phpStudy\WWW\action\shop2018\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__guid=112445570.987899654372101400.1552907197323.951; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1554082064,1554189336,1554342871,1554708363; uid=1; token=6b6d81af-62b5-4131-ae63-957e743168cd; monitor_count=72',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.shop2018.com:8081',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run \addons\loginvideo\Loginvideo @response_send [ RunTime:0.026191s ]
+[ info ] [ LOG ] INIT File
