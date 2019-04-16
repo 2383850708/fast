@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => '温远坤',
+  'name' => '树宁博客',
   'beian' => '粤ICP备15054802号-4',
   'cdnurl' => '',
   'version' => '1.0.1',

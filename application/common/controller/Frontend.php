@@ -106,8 +106,12 @@ class Frontend extends Controller
             'language'       => $lang
         ];
         $config = array_merge($config, Config::get("view_replace_str"));
-
-		if(Cache::get('category',''))
+		
+		if(Cache::get('category'))
+		{
+			$categorydata = Cache::get('category','');
+		}
+		else
 		{
 			$category = model('app\common\model\Category');
 			$condition = [];
@@ -120,14 +124,8 @@ class Frontend extends Controller
 			
 			Cache::set('category',$CategoryList,3600);
 			$categorydata = Cache::get('category','');
-
 		}
-		else
-		{
-			$categorydata = Cache::get('category','');
-			
-		}
-		
+	
 		$this->assign('categorydata',$categorydata);
 				
         Config::set('upload', array_merge(Config::get('upload'), $upload));
@@ -137,6 +135,7 @@ class Frontend extends Controller
         Hook::listen("config_init", $config);
         // 加载当前控制器语言包
         $this->loadlang($controllername);
+	
         $this->assign('site', $site);
         $this->assign('config', $config);
     }

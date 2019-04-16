@@ -20,7 +20,13 @@ class Index extends Frontend
 
     public function index()
     {
-		
+		$banner = new \app\admin\model\Banner();
+        $condition = [];
+        $condition['status'] = 'normal';
+        $banner_list = $banner->where($condition)->select();
+
+        $this->assign('banner_list',$banner_list);
+
         return $this->view->fetch();
     }
 

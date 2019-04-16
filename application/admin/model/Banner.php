@@ -18,14 +18,23 @@ class Banner extends Model
     
     // 追加属性
     protected $append = [
-
+        'status_text'
     ];
     
 
     
+    public function getStatusList()
+    {
+        return ['hidden' => __('Hidden'),'normal' => __('Normal')];
+    }     
 
 
-
+    public function getStatusTextAttr($value, $data)
+    {        
+        $value = $value ? $value : (isset($data['status']) ? $data['status'] : '');
+        $list = $this->getStatusList();
+        return isset($list[$value]) ? $list[$value] : '';
+    }
 
 
 
