@@ -27,8 +27,8 @@ header { position: fixed; top: 0; z-index: 99999 }
 .nav>li>a { color: #FFFFFF; padding: 20px 20px 20px 20px; display: inline-block;font-align:center;margin-right:1px}
 /*.nav>li>a:hover { background: #d56464; }*/
 .nav li .sub-nav { position: absolute; top: 61px; background: #FFF;  display: none; }
-.nav li .sub-nav li { clear: left;  position: relative;width:150px;background:#d56464;  }
-.nav>li>.sub-nav>li>a { font-size: 16px; color: #FFFFFF;display:inline-block;width:130px;padding:20px 0px 20px 20px;font-aligin:center; }
+.nav li .sub-nav li { clear: left;  position: relative;width:150px;background:#4a4a4a;  }
+.nav>li>.sub-nav>li>a { font-size: 16px; color: #FFFFFF;background:#d56464;display:inline-block;width:130px;padding:20px 0px 20px 20px;font-aligin:center;margin-bottom:1px }
 .nav li .sub-nav li a:hover { background: #576663; }
 #topnav_current { background: #d56464; }
 /*search*/

@@ -1,4 +1,5 @@
 window.onload = function () {
+
     var flag = true;
     var liC = document.querySelectorAll(".navBox li h2");
     // 主导航nav点击事件
@@ -26,6 +27,7 @@ window.onload = function () {
                 // 排他 secondary arrowRot obFocus
                 for (var j = 0; j < sib.length; j++) {
                     var sibSec = sib[j].getElementsByTagName('*');
+
                     for (var i = 0; i < sibSec.length; i++) {
                         if (sibSec[i].className == "secondary") {
                             otherArr.push(sibSec[i])

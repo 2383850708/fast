@@ -23,8 +23,9 @@
     $('#banner').easyFader();
 
     /*topnav select*/
-    var obj = null;
+    /*var obj = null;
     var allMenu = document.getElementById('topnav').getElementsByTagName('a');
+    console.log(allMenu);
     // console.log(allMenu);
     obj = allMenu[0];
     for (i = 1; i < allMenu.length; i++) {
@@ -32,7 +33,7 @@
             obj = allMenu[i];
         }
         //obj.id = 'topnav_current';
-    }
+    }*/
 
     /*mnav dl open*/
     var oH2 = document.getElementsByTagName('h2')[0];

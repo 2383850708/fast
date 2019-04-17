@@ -107,9 +107,17 @@ class Frontend extends Controller
         ];
         $config = array_merge($config, Config::get("view_replace_str"));
 		
-		if(Cache::get('category'))
+		if(!Cache::get('category'))
 		{
-			$categorydata = Cache::get('category','');
+            $category = model('app\common\model\Category');
+            $condition = [];
+            $condition['type'] = 'blog';
+
+            $dataList = collection($category->where($condition)->order('weigh desc,id desc')->field('id,name,pid,type,flag')->select())->toArray();
+
+            $Category = new Category($dataList);
+            $CategoryList = $Category->leaf();
+			//$categorydata = Cache::get('category','');
 
 		}
 		else
@@ -123,12 +131,11 @@ class Frontend extends Controller
 			$Category = new Category($dataList);
 			$CategoryList = $Category->leaf();
 
-			Cache::set('category',$CategoryList,3600);
-			$categorydata = Cache::get('category','');
-
+			//Cache::set('category',$CategoryList,3600);
+			//$categorydata = Cache::get('category','');
 		}
-       
-		$this->assign('categorydata',$categorydata);
+
+		$this->assign('categorydata',$CategoryList);
 				
         Config::set('upload', array_merge(Config::get('upload'), $upload));
 		
