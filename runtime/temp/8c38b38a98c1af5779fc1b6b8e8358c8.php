@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"G:\phpStudy\WWW\action\shop2018\public/../application/index\view\index\index.html";i:1555328115;s:73:"G:\phpStudy\WWW\action\shop2018\application\index\view\common\header.html";i:1555317550;s:71:"G:\phpStudy\WWW\action\shop2018\application\index\view\common\left.html";i:1555318822;s:71:"G:\phpStudy\WWW\action\shop2018\application\index\view\common\foot.html";i:1555318256;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"G:\phpStudy\WWW\action\shop2018\public/../application/index\view\index\index.html";i:1555493988;s:73:"G:\phpStudy\WWW\action\shop2018\application\index\view\common\header.html";i:1555317550;s:71:"G:\phpStudy\WWW\action\shop2018\application\index\view\common\left.html";i:1555494168;s:71:"G:\phpStudy\WWW\action\shop2018\application\index\view\common\foot.html";i:1555318256;}*/ ?>
 ﻿<!doctype html>
 <html>
 <head>
@@ -18,6 +18,7 @@
 <script src="js/modernizr.js"></script>
 <![endif]-->
 </head>
+<link rel='stylesheet'  href='home/jiaoben6415/css/style.css' type='text/css' />
 <body>
 <header> 
   <!--menu begin-->
@@ -121,35 +122,38 @@
   <!--mnav end--> 
 </header>
 <article> 
-  <!--banner begin-->
- <div class="picsbox"> 
-  <div class="banner">
-    <div id="banner" class="fader">
-      <?php if(is_array($banner_list) || $banner_list instanceof \think\Collection || $banner_list instanceof \think\Paginator): $i = 0; $__LIST__ = $banner_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-      <li class="slide" ><a href="/" target="_blank"><img src="<?php echo $vo['image']; ?>"><span class="imginfo"><?php echo $vo['title']; ?></span></a></li>
-      <?php endforeach; endif; else: echo "" ;endif; ?>
-      
-      <div class="fader_controls">
-        <div class="page prev" data-target="prev">&lsaquo;</div>
-        <div class="page next" data-target="next">&rsaquo;</div>
-        <ul class="pager_list">
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--banner end-->
-  <div class="toppic">
-    <li> <a href="/" target="_blank"> <i><img src="home/images/toppic01.jpg"></i>
-      <h2>别让这些闹心的套路，毁了你的网页设计!</h2>
-      <span>学无止境</span> </a> </li>
-    <li> <a href="/" target="_blank"> <i><img src="home/images/zd01.jpg"></i>
-      <h2>个人博客，属于我的小世界！</h2>
-      <span>学无止境</span> </a> </li>
-  </div>
-  </div>
+
   <div class="blank"></div>
   <!--blogsbox begin-->
   <div class="blogsbox">
+  <div class="warper">
+		<div id="wowslider-container1">
+		  <div class="ws_images">
+			<ul>
+			  <li><a target="_blank" href="#"><img title="高级职位都在这里" src="home/jiaoben6415/images/bimg1.jpg" /></a></li>
+			  <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="home/jiaoben6415/images/bimg2.jpg" /></a></li>
+			  <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="home/jiaoben6415/images/bimg3.jpg" /></a></li>
+			  <li><a target="_blank" href="#"><img title="高级职位都在这里" src="home/jiaoben6415/images/bimg1.jpg" /></a></li>
+			  <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="home/jiaoben6415/images/bimg2.jpg" /></a></li>
+			  <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="home/jiaoben6415/images/bimg3.jpg" /></a></li>
+			</ul>
+		  </div>
+		  <div class="ws_thumbs">
+			<div>
+			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg1.jpg" /></a>
+			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg2.jpg" /></a>
+			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg3.jpg" /></a>
+			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg1.jpg" /></a>
+			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg2.jpg" /></a>
+			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg3.jpg" /></a>
+			</div>
+		  </div>
+		  <div class="ws_shadow"></div>
+		</div>
+	</div>
+	
+	<div style="height:20px;"></div>
+  
     <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
       <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
       <span class="blogpic"><a href="/" title=""><img src="home/images/toppic01.jpg" alt=""></a></span>
@@ -211,8 +215,16 @@
     </div>
     
   </div>
+  <script type="text/javascript" src="home/jiaoben6415/js/slider.js"></script>
+<script type="text/javascript">
+jQuery("#wowslider-container1").wowSlider({effect:"cube",prev:"",next:"",duration:20*100,delay:20*100,width:716,height:297,autoPlay:true,playPause:true,stopOnHover:false,loop:false,bullets:0,caption:true,captionEffect:"slide",controls:true,onBeforeStep:0,images:0});
+</script>
   <!--blogsbox end-->
   <div class="sidebar">
+	<div class="zhuanti">
+		<a href="https://weibo.com/cuiqingcai" rel="external nofollow" title="" target="_blank" data-original-title="新浪微博"><i class="sinaweibo fa fa-weibo"></i></a>
+	</div>
+
     <div class="zhuanti">
       <h2 class="hometitle">特别推荐</h2>
       <ul>
