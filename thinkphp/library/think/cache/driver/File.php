@@ -123,12 +123,15 @@ class File extends Driver
                 //启用数据压缩
                 $content = gzuncompress($content);
             }
-            $content = unserialize($content);
+            $content = $this->mb_unserialize($content);
             return $content;
         } else {
             return $default;
         }
     }
+	function mb_unserialize($str) {
+    return preg_replace_callback('#s:(\d+):"(.*?)";#s',function($match){return 's:'.strlen($match[2]).':"'.$match[2].'";';},$str);
+	}
 
     /**
      * 写入缓存

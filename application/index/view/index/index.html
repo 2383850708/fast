@@ -5,11 +5,16 @@
   <!--menu begin-->
   <div class="menu">
     <nav class="nav" id="topnav">
-      <h1 class="logo"><a href="http://www.yangqq.com">{$site.name}</a></h1>
+      <!--<h1 class="logo"><a href="http://www.yangqq.com">{$site.name}</a></h1>-->
 	  
 		{present name="categorydata"}
-			{volist name="categorydata" id="vo"}
-				<li><a href="index.html">{$vo.name}</a> 
+			{volist name="categorydata" id="vo" key="k"}
+                {if condition="$k eq 1"}
+                    <li><a id="topnav_current" href="index.html">{$vo.name}</a>
+                {else /}
+                    <li><a  href="index.html">{$vo.name}</a>
+                {/if}
+
 				{present name="$vo.child"}
 					<ul class="sub-nav">
 					{volist name="vo.child" id="v"}
@@ -51,8 +56,8 @@
       <li><a href="gbook.html">留言</a> </li>
       <li><a href="info.html">内容页</a> </li> -->
       <!--search begin-->
-      <div id="search_bar" class="search_bar">
-        <form  id="searchform" action="[!--news.url--]e/search/index.php" method="post" name="searchform">
+      <!--<div id="search_bar" class="search_bar">
+        <form  id="searchform" action="[!&#45;&#45;news.url&#45;&#45;]e/search/index.php" method="post" name="searchform">
           <input class="input" placeholder="想搜点什么呢..." type="text" name="keyboard" id="keyboard">
           <input type="hidden" name="show" value="title" />
           <input type="hidden" name="tempid" value="1" />
@@ -60,10 +65,12 @@
           <input type="hidden" name="Submit" value="搜索" />
           <span class="search_ico"></span>
         </form>
-      </div>
-      <!--search end--> 
+      </div>-->
+      <!--search end-->
     </nav>
+    <div class="clear"></div>
   </div>
+
   <!--menu end--> 
   <!--mnav begin-->
   <!-- <div id="mnav">

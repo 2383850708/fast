@@ -31,8 +31,8 @@
         if (window.location.href.indexOf(allMenu[i].href) >= 0) {
             obj = allMenu[i];
         }
+        //obj.id = 'topnav_current';
     }
-    obj.id = 'topnav_current';
 
     /*mnav dl open*/
     var oH2 = document.getElementsByTagName('h2')[0];

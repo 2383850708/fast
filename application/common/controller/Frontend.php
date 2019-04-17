@@ -110,6 +110,7 @@ class Frontend extends Controller
 		if(Cache::get('category'))
 		{
 			$categorydata = Cache::get('category','');
+
 		}
 		else
 		{
@@ -121,11 +122,12 @@ class Frontend extends Controller
 			
 			$Category = new Category($dataList);
 			$CategoryList = $Category->leaf();
-			
+
 			Cache::set('category',$CategoryList,3600);
 			$categorydata = Cache::get('category','');
+
 		}
-	
+       
 		$this->assign('categorydata',$categorydata);
 				
         Config::set('upload', array_merge(Config::get('upload'), $upload));
