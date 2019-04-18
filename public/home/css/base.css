@@ -19,15 +19,23 @@ article { width: 1226px; margin: 216px auto 0; overflow: hidden }
 header { position: fixed; top: 0; z-index: 99999 }
 .container { width: 1140px; margin: 20px auto }
 
-/*å…¬å‘Š*/
+/*????*/
 .speedbar{
-	max-width: 1185px;
+	max-width: 1186px;
     width: 100%;
     margin: 0 auto;
     background: #ffffff;
     padding: 8px 20px 8px;
+    color:#666;
     line-height: 25px;
     /* border-bottom:2px solid #4a4a4a */
+}
+
+.speedbar a{
+    color:#00a67c;
+}
+.speedbar i{
+    font-size:16px;
 }
 
 .pull-right{
@@ -38,6 +46,14 @@ header { position: fixed; top: 0; z-index: 99999 }
 	float:left;
 
 }
+
+/*¹«¸æ*/
+
+
+
+/*font*/
+
+
 
 /*title*/
 .container-inner {
