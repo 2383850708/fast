@@ -5,9 +5,11 @@
     }
     /*nav show or hide*/
     $('.nav>li').hover(function () {
-        $(this).children('ul').stop(true, true).show(400);
+        $(this).css('background','#d56464');
+        $(this).children('ul').stop(true, true).slideDown();
     }, function () {
-        $(this).children('ul').stop(true, true).hide(400);
+         $(this).css('background','#4a4a4a');
+        $(this).children('ul').stop(true, true).slideUp();
     });
     /*search*/
     $('.search_ico').click(function () {
@@ -43,16 +45,7 @@
         style.display = style.display == 'block' ? 'none' : 'block';
         oH2.className = style.display == 'block' ? 'open' : '';
     };
-    //菜单点击效果
-    $('.list_dt').on('click', function () {
-        $('.list_dd').stop();
-        $(this).siblings('dt').removeAttr('id');
-        if ($(this).attr('id') == 'open') {
-            $(this).removeAttr('id').siblings('dd').slideUp();
-        } else {
-            $(this).attr('id', 'open').next().slideDown().siblings('dd').slideUp();
-        }
-    });
+  
 
     //回到顶部
     // browser window scroll (in pixels) after which the "back to top" link is shown

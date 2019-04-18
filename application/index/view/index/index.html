@@ -1,63 +1,48 @@
 ﻿{include file="common/header" /}
 <link rel='stylesheet'  href='home/jiaoben6415/css/style.css' type='text/css' />
 <body>
-<header> 
+<header > 
+<div style="background: #d56464;">
+  <div class="container-inner">
+  <div class="yusi-logo">
+    <a href="/">
+      <h1>
+        <span class="yusi-mono">树宁</span>
+        <span class="yusi-bloger">[唐博虎]个人博客</span>
+      </h1>
+    </a>
+  </div>
+</div>
+</div>
+
   <!--menu begin-->
+
   <div class="menu">
+
     <nav class="nav" id="topnav">
       <!--<h1 class="logo"><a href="http://www.yangqq.com">{$site.name}</a></h1>-->
-	  
-		{present name="categorydata"}
-			{volist name="categorydata" id="vo" key="k"}
-                {if condition="$k eq 1"}
-                    <li><a id="topnav_current" href="index.html">{$vo.name}</a>
-                {else /}
-                    <li><a  href="index.html">{$vo.name}</a>
-                {/if}
-
-				{present name="$vo.child"}
-					<ul class="sub-nav">
-					{volist name="vo.child" id="v"}
-						 <li><a href="life.html">{$v.name}</a></li>
-					{/volist}
-					</ul>
-				{/present}
-				</li>
-			{/volist}
-		{/present}
-	  
-      <!-- <li><a href="index.html">网站首页</a> </li>
-      <li><a href="about.html">关于我</a> </li>
-      <li><a href="share.html">模板分享</a>
-        <ul class="sub-nav">
-          <li><a href="share.html">个人博客模板</a></li>
-          <li><a href="share.html">国外Html5模板</a></li>
-          <li><a href="share.html">企业网站模板</a></li>
-        </ul>
-      </li>
-      <li><a href="list.html">学无止境</a>
-        <ul class="sub-nav">
-          <li><a href="list.html">心得笔记</a></li>
-          <li><a href="list.html">CSS3|Html5</a></li>
-          <li><a href="list.html">网站建设</a></li>
-          <li><a href="list.html">推荐工具</a></li>
-          <li><a href="list.html">JS实例索引</a></li>
-        </ul>
-      </li>
-      <li><a href="life.html">慢生活</a>
-        <ul class="sub-nav">
-          <li><a href="life.html">日记</a></li>
-          <li><a href="life.html">欣赏</a></li>
-          <li><a href="life.html">程序人生</a></li>
-          <li><a href="life.html">经典语录</a></li>
-        </ul>
-      </li>
-      <li><a href="time.html">时间轴</a> </li>
-      <li><a href="gbook.html">留言</a> </li>
-      <li><a href="info.html">内容页</a> </li> -->
-      <!--search begin-->
-      <!--<div id="search_bar" class="search_bar">
-        <form  id="searchform" action="[!&#45;&#45;news.url&#45;&#45;]e/search/index.php" method="post" name="searchform">
+    
+    {present name="categorydata"}
+      {volist name="categorydata" id="vo" key="k"}
+          {if condition="$k eq 1"}
+              <li><a id="topnav_current" href="index.html">{$vo.name}</a>
+          {else /}
+              <li><a  href="index.html">{$vo.name}</a>
+          {/if}
+                
+          {present name="$vo.child"}
+            <ul class="sub-nav">
+            {volist name="vo.child" id="v"}
+               <li><a href="life.html">{$v.name}</a></li>
+            {/volist}
+            </ul>
+          {/present}
+        </li>
+      {/volist}
+    {/present}
+    <!--search begin-->
+      <div id="search_bar" class="search_bar">
+        <form  id="searchform" action="[!--news.url--]e/search/index.php" method="post" name="searchform">
           <input class="input" placeholder="想搜点什么呢..." type="text" name="keyboard" id="keyboard">
           <input type="hidden" name="show" value="title" />
           <input type="hidden" name="tempid" value="1" />
@@ -65,51 +50,25 @@
           <input type="hidden" name="Submit" value="搜索" />
           <span class="search_ico"></span>
         </form>
-      </div>-->
-      <!--search end-->
+      </div>
+      <!--search end--> 
     </nav>
     <div class="clear"></div>
-  </div>
 
-  <!--menu end--> 
-  <!--mnav begin-->
-  <!-- <div id="mnav">
-    <h2><a href="http://www.yangqq.com" class="mlogo">杨青博客</a><span class="navicon"></span></h2>
-    <dl class="list_dl">
-      <dt class="list_dt"> <a href="index.html">网站首页</a> </dt>
-      <dt class="list_dt"> <a href="about.html">关于我</a> </dt>
-      <dt class="list_dt"> <a href="#">模板分享</a> </dt>
-      <dd class="list_dd">
-        <ul>
-          <li><a href="share.html">个人博客模板</a></li>
-          <li><a href="share.html">国外Html5模板</a></li>
-          <li><a href="share.html">企业网站模板</a></li>
-        </ul>
-      </dd>
-      <dt class="list_dt"> <a href="#">学无止境</a> </dt>
-      <dd class="list_dd">
-        <ul>
-          <li><a href="list.html">心得笔记</a></li>
-          <li><a href="list.html">CSS3|Html5</a></li>
-          <li><a href="list.html">网站建设</a></li>
-          <li><a href="list.html">推荐工具</a></li>
-          <li><a href="list.html">JS实例索引</a></li>
-        </ul>
-      </dd>
-      <dt class="list_dt"> <a href="#">慢生活</a> </dt>
-      <dd class="list_dd">
-        <ul>
-          <li><a href="life.html">日记</a></li>
-          <li><a href="life.html">欣赏</a></li>
-          <li><a href="life.html">程序人生</a></li>
-          <li><a href="life.html">经典语录</a></li>
-        </ul>
-      </dd>
-      <dt class="list_dt"> <a href="time.html">时间轴</a> </dt>
-      <dt class="list_dt"> <a href="gbook.html">留言</a> </dt>
-    </dl>
-  </div> -->
-  <!--mnav end--> 
+  </div>
+  <div style="background-color: #eee;">
+    <div class="speedbar">
+      <div class="pull-right">
+          <i class="fa fa-user"></i> <a href="/wp-login.php?action=register">投稿</a>&nbsp;&nbsp;&nbsp;   <i class="fa fa-power-off"></i> <a href="https://cuiqingcai.com/wp-login.php">登录</a>      
+      </div>
+      <div class="toptip">
+        <strong class="text-success"><i class="fa fa-volume-up"></i> </strong> &nbsp; 《Python3网络爬虫开发实战》赠书活动正在进行中！详情请戳<a href="https://cuiqingcai.com/6173.html">赠书活动</a>！欢迎参与！非常感谢！
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+  
 </header>
 <article> 
 
@@ -117,32 +76,32 @@
   <!--blogsbox begin-->
   <div class="blogsbox">
   <div class="warper">
-		<div id="wowslider-container1">
-		  <div class="ws_images">
-			<ul>
-			  <li><a target="_blank" href="#"><img title="高级职位都在这里" src="home/jiaoben6415/images/bimg1.jpg" /></a></li>
-			  <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="home/jiaoben6415/images/bimg2.jpg" /></a></li>
-			  <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="home/jiaoben6415/images/bimg3.jpg" /></a></li>
-			  <li><a target="_blank" href="#"><img title="高级职位都在这里" src="home/jiaoben6415/images/bimg1.jpg" /></a></li>
-			  <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="home/jiaoben6415/images/bimg2.jpg" /></a></li>
-			  <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="home/jiaoben6415/images/bimg3.jpg" /></a></li>
-			</ul>
-		  </div>
-		  <div class="ws_thumbs">
-			<div>
-			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg1.jpg" /></a>
-			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg2.jpg" /></a>
-			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg3.jpg" /></a>
-			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg1.jpg" /></a>
-			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg2.jpg" /></a>
-			<a target="_blank" href="#"><img src="home/jiaoben6415/images/simg3.jpg" /></a>
-			</div>
-		  </div>
-		  <div class="ws_shadow"></div>
-		</div>
-	</div>
-	
-	<div style="height:20px;"></div>
+    <div id="wowslider-container1">
+      <div class="ws_images">
+      <ul>
+        <li><a target="_blank" href="#"><img title="高级职位都在这里" src="home/jiaoben6415/images/bimg1.jpg" /></a></li>
+        <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="home/jiaoben6415/images/bimg2.jpg" /></a></li>
+        <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="home/jiaoben6415/images/bimg3.jpg" /></a></li>
+        <li><a target="_blank" href="#"><img title="高级职位都在这里" src="home/jiaoben6415/images/bimg1.jpg" /></a></li>
+        <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="home/jiaoben6415/images/bimg2.jpg" /></a></li>
+        <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="home/jiaoben6415/images/bimg3.jpg" /></a></li>
+      </ul>
+      </div>
+      <div class="ws_thumbs">
+      <div>
+      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg1.jpg" /></a>
+      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg2.jpg" /></a>
+      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg3.jpg" /></a>
+      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg1.jpg" /></a>
+      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg2.jpg" /></a>
+      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg3.jpg" /></a>
+      </div>
+      </div>
+      <div class="ws_shadow"></div>
+    </div>
+  </div>
+  
+  <div style="height:20px;"></div>
   
     <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
       <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>

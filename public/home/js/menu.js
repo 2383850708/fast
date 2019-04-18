@@ -1,5 +1,5 @@
 window.onload = function () {
-
+ 
     var flag = true;
     var liC = document.querySelectorAll(".navBox li h2");
     // 主导航nav点击事件
