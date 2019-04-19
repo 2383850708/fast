@@ -99,6 +99,14 @@ class Ajax extends Backend
         //
         $splInfo = $file->validate(['size' => $size])->move(ROOT_PATH . '/public' . $uploadDir, $fileName);
         if ($splInfo) {
+
+           /* if($fileInfo['type']=='image/jpeg' || $fileInfo['type']=='image/png')
+            {
+                
+                $image = \think\Image::open(ROOT_PATH . '/public' . $uploadDir . $splInfo->getSaveName());
+                $image->thumb(150, 150)->save(ROOT_PATH . '/public' . $uploadDir . 'thumb_'.$splInfo->getSaveName());
+            }*/
+
             $imagewidth = $imageheight = 0;
             if (in_array($suffix, ['gif', 'jpg', 'jpeg', 'bmp', 'png', 'swf'])) {
                 $imgInfo = getimagesize($splInfo->getPathname());
