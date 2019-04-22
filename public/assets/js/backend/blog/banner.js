@@ -38,6 +38,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
             // 为表格绑定事件
             Table.api.bindevent(table);
+            Upload.events.onBeforeUpload = function(up, file){
+    Upload.list['plupload-image'].setOption("multipart_params",{"post_id":1,"post_author":2})
+};
         },
         add: function () {
             Controller.api.bindevent();
@@ -50,6 +53,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 Form.api.bindevent($("form[role=form]"));
             }
         }
+
     };
     return Controller;
 });

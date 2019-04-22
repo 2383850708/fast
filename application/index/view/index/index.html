@@ -79,27 +79,26 @@
     <div id="wowslider-container1">
       <div class="ws_images">
       <ul>
-        <li><a target="_blank" href="#"><img title="高级职位都在这里" src="home/jiaoben6415/images/bimg1.jpg" /></a></li>
-        <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="home/jiaoben6415/images/bimg2.jpg" /></a></li>
-        <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="home/jiaoben6415/images/bimg3.jpg" /></a></li>
-        <li><a target="_blank" href="#"><img title="高级职位都在这里" src="home/jiaoben6415/images/bimg1.jpg" /></a></li>
-        <li><a target="_blank" href="#"><img title="互联网设计布道者冯铁看诊把脉" src="home/jiaoben6415/images/bimg2.jpg" /></a></li>
-        <li><a target="_blank" href="#"><img title="颜值不高别装“表”" src="home/jiaoben6415/images/bimg3.jpg" /></a></li>
+        {present name="banner_list"}
+          {volist name="banner_list" id="vo" key="k"}
+            <li><a target="_blank" href="{$vo.url}"><img title="{$vo.title}" src="{$vo.image}" /></a></li>
+          {/volist}
+        {/present}
+        
       </ul>
       </div>
       <div class="ws_thumbs">
       <div>
-      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg1.jpg" /></a>
-      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg2.jpg" /></a>
-      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg3.jpg" /></a>
-      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg1.jpg" /></a>
-      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg2.jpg" /></a>
-      <a target="_blank" href="#"><img src="home/jiaoben6415/images/simg3.jpg" /></a>
+      {present name="banner_list"}
+          {volist name="banner_list" id="vo" key="k"}
+            <a target="_blank" href="#"><img src="{$vo.ImageThumb}" /></a>
+          {/volist}
+      {/present}
+      
       </div>
       </div>
       <div class="ws_shadow"></div>
-    </div>
-  </div>
+    </div>  </div>
   
   <div style="height:20px;"></div>
   

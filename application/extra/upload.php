@@ -26,4 +26,8 @@ return [
      * 是否支持批量上传
      */
     'multiple'  => false,
+    /*是否开启缩略图*/
+    'thumbnail' => true,
+    'thumbnail_width' =>'120',
+    'thumbnail_height' =>'120',
 ];

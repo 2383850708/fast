@@ -36,6 +36,23 @@ class Banner extends Model
         return isset($list[$value]) ? $list[$value] : '';
     }
 
+    public function getImageThumbAttr($value, $data)
+    {      
+
+        if($data['image'])
+        {
+            $begin = substr($data['image'],0,strrpos($data['image'],'/')+1);
+            $end = substr($data['image'],strrpos($data['image'],'/')+1);
+            $thumb_image = $begin.'thumb_'.$end;
+        }
+        else
+        {
+            $thumb_image = '';
+        }
+       
+        return $thumb_image;
+    }
+
 
 
 

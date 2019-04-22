@@ -23,8 +23,13 @@ class Index extends Frontend
 		$banner = new \app\admin\model\Banner();
         $condition = [];
         $condition['status'] = 'normal';
-        $banner_list = $banner->where($condition)->select();
+        $banner_list = $banner->where($condition)->field('id,title,image,contents,url')->select();//
 
+        if($banner_list)
+        {
+            $banner_list = collection($banner_list)->append(['ImageThumb'])->toArray();
+        }
+        
         $this->assign('banner_list',$banner_list);
 
         return $this->view->fetch();
