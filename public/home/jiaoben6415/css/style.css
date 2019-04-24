@@ -12,7 +12,7 @@ a:hover { color: #D40000; text-decoration: none}
 .clear{height:0; overflow:hidden; clear:both}
 
 /*基本框架CSS结束，应用特效时，以上样式可删除*/
-.warper{ width: 860px; height: 300px; border: 2px solid #efefef; margin: 0 auto; padding: 3px 3px 0px 0px; }
+.warper{ width: 870px; height: 300px; border: 0px solid #efefef; margin: 0 auto; padding: 0px 0px 0px 0px; }
 #wowslider-container1 { zoom: 1; position: relative; max-width: 716px; float:right; z-index: 90 }
 * html #wowslider-container1 { width: 716px }
 #wowslider-container1 .ws_images ul { position: relative; width: 10000%; height: auto; left: 0; list-style: none; margin: 0; padding: 0; border-spacing: 0; overflow: visible }
@@ -37,7 +37,7 @@ a:hover { color: #D40000; text-decoration: none}
 #wowslider-container1 .ws-title { position: absolute; display: block; bottom: 3.5em; left: 1em; margin-right: 1em; padding: 1em .9em .9em .9em; background-color: rgba(0,0,0,0.4); color: #fff; z-index: 50; font-weight: bold; text-transform: uppercase; border-radius: .2em; -moz-border-radius: .2em; -webkit-border-radius: .2em }
 #wowslider-container1 .ws-title div { margin-top: .3em; font-size: 1.6em; line-height: 1.15em; font-weight: normal; text-transform: none; color: #fff }
 #wowslider-container1 .ws-title span { font-size: 2.4em }
-#wowslider-container1 .ws_thumbs { font-size: 0; position: absolute; overflow: auto; z-index: 70; left: -19.51%; top: 0; width: 18.5%; height: 100% }
+#wowslider-container1 .ws_thumbs { font-size: 0; position: absolute; overflow: auto; z-index: 70; left: -21.51%; top: 0; width: 19.5%; height: 100% }
 #wowslider-container1 .ws_thumbs img { text-decoration: none; border: 0; width: 100% }
 #wowslider-container1 .ws_thumbs a { position: relative; text-indent: -4000px; color: transparent; opacity: .85; text-decoration: none; display: inline-block; border: 0; margin-bottom: 4%; text-indent: 0; padding: 2.99%; width: 89.54%; background-color: #fff }
 #wowslider-container1 .ws_thumbs a:hover { opacity: 1 }
