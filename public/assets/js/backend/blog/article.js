@@ -46,6 +46,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 			
             // 为表格绑定事件
             Table.api.bindevent(table);
+           
+
+
         },
         add: function () {
             Controller.api.bindevent();

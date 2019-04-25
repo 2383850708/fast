@@ -63,8 +63,8 @@
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
                 <input id="c-thumbimage" class="form-control" size="50" name="row[thumbimage]" type="text">
-                <div class="input-group-addon no-border no-padding">
-                    <span><button type="button" id="plupload-thumbimage" class="btn btn-danger plupload" data-input-id="c-thumbimage" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-thumbimage"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                <div class="input-group-addon no-border no-padding">  
+                    <span><button type="button" id="plupload-thumbimage" data-multipart='{"type":"banner"}' class="btn btn-danger plupload" data-input-id="c-thumbimage" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-thumbimage"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
                     <span><button type="button" id="fachoose-thumbimage" class="btn btn-primary fachoose" data-input-id="c-thumbimage" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
                 </div>
                 <span class="msg-box n-right" for="c-thumbimage"></span>
@@ -102,3 +102,5 @@
         </div>
     </div>
 </form>
+
+

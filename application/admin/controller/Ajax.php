@@ -46,10 +46,10 @@ class Ajax extends Backend
      */
     public function upload()
     {
-       
+        $type = input('param.type');
         Config::set('default_return_type', 'json');
         $file = $this->request->file('file');
-       
+        print_r($file);exit;
         if (empty($file)) {
             $this->error(__('No file upload or server upload limit exceeded'));
         }
@@ -105,10 +105,12 @@ class Ajax extends Backend
           
             if($upload['thumbnail'])
             {
-               
-                $image = \think\Image::open(ROOT_PATH . '/public' . $uploadDir . $splInfo->getSaveName());
+                if($type=='banner')
+                {
+                   $image = \think\Image::open(ROOT_PATH . '/public' . $uploadDir . $splInfo->getSaveName());
 
-                $image->thumb($upload['thumbnail_width'], $upload['thumbnail_height'])->save(ROOT_PATH . '/public' . $uploadDir . 'thumb_'.$splInfo->getSaveName());
+                    $image->thumb($upload['thumbnail_width'], $upload['thumbnail_height'])->save(ROOT_PATH . '/public' . $uploadDir . 'thumb_'.$splInfo->getSaveName());
+                }  
             }
 
             $imagewidth = $imageheight = 0;

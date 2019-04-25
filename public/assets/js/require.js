@@ -9,6 +9,7 @@
 
 var requirejs, require, define;
 (function (global, setTimeout) {
+  
     var req, s, head, baseElement, dataMain, src,
         interactiveScript, currentlyAddingScript, mainScript, subPath,
         version = '2.3.2',
