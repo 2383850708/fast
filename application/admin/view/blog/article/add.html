@@ -43,7 +43,12 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Author')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-author" class="form-control" name="row[author]" type="text">
+            <select id="c-author" data-rule="required" class="form-control selectpicker" name="row[author_id]" >
+                {foreach name="author_list" item="vo"}
+                <option data-type="" value="{$vo.id}" >{$vo.name}</option>
+                {/foreach}
+            </select>
+            <!-- <input id="c-author" class="form-control" name="row[author]" type="text"> -->
         </div>
     </div>
     <div class="form-group">

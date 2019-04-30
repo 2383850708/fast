@@ -48,4 +48,9 @@ class Article extends Model
     {
         return $this->belongsTo('Category', 'category_id', 'id', [], 'LEFT')->setEagerlyType(0);
     }
+
+    public function author()
+    {
+        return $this->belongsTo('Author', 'author_id', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 }

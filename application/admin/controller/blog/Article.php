@@ -68,13 +68,13 @@ class Article extends Backend
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
             $total = $this->model
-                    ->with(['admin','category'])
+                    ->with(['admin','category','author'])
                     ->where($where)
                     ->order($sort, $order)
                     ->count();
 
             $list = $this->model
-                    ->with(['admin','category'])
+                    ->with(['admin','category','author'])
                     ->where($where)
                     ->order($sort, $order)
                     ->limit($offset, $limit)
@@ -86,8 +86,11 @@ class Article extends Backend
 				$row->getRelation('admin')->visible(['username']);
 				$row->visible(['category']);
 				$row->getRelation('category')->visible(['name','id']);
+                $row->visible(['author']);
+                $row->getRelation('author')->visible(['name','id']);
             }
             $list = collection($list)->toArray();
+
             $result = array("total" => $total, "rows" => $list);
 
             return json($result);
@@ -140,6 +143,10 @@ class Article extends Backend
         }
 		else
 		{
+         $author_model = model('Author');
+         $author = $author_model->select();
+         $author_list = collection($author)->toArray();
+         $this->assign('author_list',$author_list);
 		 return $this->view->fetch();
 		}
 	 }
@@ -193,6 +200,10 @@ class Article extends Backend
             }
             $this->error(__('Parameter %s can not be empty', ''));
         }
+        $author_model = model('Author');
+        $author = $author_model->select();
+        $author_list = collection($author)->toArray();
+        $this->assign('author_list',$author_list);
         $this->view->assign("row", $row);
         return $this->view->fetch();
     }

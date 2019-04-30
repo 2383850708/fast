@@ -12,7 +12,7 @@ class Article extends Validate
     protected $rule = [
 		'category_id'=>'require',
 		'title' => 'require|unique:Article',
-		'author' => 'require',
+		'author_id' => 'require',
 		'hits' => 'number',
 		'pageviews' => 'number',
 		'weigh' => 'number',
@@ -25,7 +25,7 @@ class Article extends Validate
 		'category_id.require' => '请选择分类',
 		'title.require' => '标题不能为空',
 		'title.unique' => '标题名已存在',
-		'author.require' => '作者不能为空',
+		'author_id.require' => '作者不能为空',
 		'hits.number' => '点击量必须为数字',
 		'pageviews.number' => '浏览量必须为数字',
 		'weigh.number' => '权重必须为数字'
