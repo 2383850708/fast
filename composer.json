@@ -26,7 +26,8 @@
         "overtrue/pinyin": "~3.0",
         "phpoffice/phpexcel": "^1.8",
 		"paragonie/random_compat": "9.99.99",
-        "topthink/think-image": "^1.0"
+        "topthink/think-image": "^1.0",
+        "elasticsearch/elasticsearch": "^6.7"
     },
 	
     "config": {
