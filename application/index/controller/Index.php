@@ -38,6 +38,51 @@ class Index extends Frontend
         return $this->view->fetch();
     }
 
+    public function ajax_load_data()
+    {
+        $params = input('param.');
+        $article = new \app\admin\model\Article;
+        $where = [];
+        $where['article.status'] = 'normal';
+        $total = $article
+                ->with(['admin','category','author'])
+                ->where($where)
+                //->fetchSql(true)
+                ->count();
+        $list = $article
+                ->with(['admin','category','author'])
+                ->where($where)
+                ->order('article.id', 'desc')
+                ->limit($params['Page'], $params['Limit'])
+                
+                ->select();
+        foreach ($list as $row) 
+        {
+            $row->visible(['id','title','author','keyword','content','flag','hits','thumbimage','pageviews','comment_count','status','createtime','updatetime']);
+            $row->visible(['admin']);
+            $row->getRelation('admin')->visible(['username']);
+            $row->visible(['category']);
+            $row->getRelation('category')->visible(['name','id']);
+            $row->visible(['author']);
+            $row->getRelation('author')->visible(['name','id']);
+        }
+        $list = collection($list)->toArray();
+        $data = [];
+        if ($list) 
+        {
+            $data['status'] = 1;
+            $data['count'] = $total;
+            $data['data'] = $list;
+        }
+        else
+        {
+            $data['status'] = 0;
+        }
+        
+        return json($data);
+
+    }
+
     public function news()
     {
         $newslist = [];

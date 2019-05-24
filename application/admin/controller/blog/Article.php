@@ -72,7 +72,7 @@ class Article extends Backend
                     ->where($where)
                     ->order($sort, $order)
                     ->count();
-
+            
             $list = $this->model
                     ->with(['admin','category','author'])
                     ->where($where)

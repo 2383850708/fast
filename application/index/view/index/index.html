@@ -1,4 +1,18 @@
 ﻿{include file="common/header" /}
+<!--分页组件 JS CSS 开始-->
+
+ <!--分页组件 CSS-->
+
+<link rel="stylesheet" type="text/css" href="home/kkpager/src/kkpager_blue.css" />
+ <!--分页组件 JS-->
+
+ <script type="text/javascript" src="home/kkpager/src/kkpager.min.js"></script>
+
+ <script type="text/javascript" src="home/kkpager/src/kkpager.js"></script> 
+ <script type="text/javascript" src="home/kkpager/src/jquery.tmpl.js"></script> 
+
+ <!--分页组件 JS CSS 结束-->
+
 <link rel='stylesheet'  href='home/jiaoben6415/css/style.css' type='text/css' />
 <body>
 <header > 
@@ -8,7 +22,7 @@
     <a href="/">
       <h1>
         <span class="yusi-mono">树宁</span>
-        <span class="yusi-bloger">[唐博虎]个人博客</span>
+        <span class="yusi-bloger">的个人博客</span>
       </h1>
     </a>
   </div>
@@ -101,8 +115,8 @@
     </div>  </div>
   
   <div style="height:20px;"></div>
-  
-    <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
+    <div id="tmp"></div>
+    <!-- <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
       <h3 class="blogtitle"><a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a></h3>
       <span class="blogpic"><a href="/" title=""><img src="home/images/toppic01.jpg" alt=""></a></span>
       <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
@@ -160,8 +174,9 @@
           <li class="like">9999</li>
         </ul>
       </div>
-    </div>
-    
+    </div> -->
+    <div id="info"></div>
+    <p id="kkpager"></p>
   </div>
   <script type="text/javascript" src="home/jiaoben6415/js/slider.js"></script>
 <script type="text/javascript">
@@ -170,6 +185,197 @@ jQuery("#wowslider-container1").wowSlider({effect:"cube",prev:"",next:"",duratio
   <!--blogsbox end-->
   {include file="common/left" /}
 </article>
+
+<script type="text/javascript">
+  function getParameter(name) 
+  { 
+    alert(1);
+  }
+
+  $(function () {
+
+      //----分页部分 代码片段一 开始----
+
+      var totalPage = 20;//总共多少页
+
+      var totalRecords = 200;//总共多少条
+
+      var pagehref = "{:url('index/ajax_load_data')}";
+
+      //var pageNo = GetQueryString('pno');
+     
+      var limit = 1;
+      var pageNo = '';
+
+      if (!pageNo) {
+
+        pageNo = 0;
+
+      }
+
+      //----分页部分 代码片段一 结束----
+
+      //----页面数据加载 并绑定生成分页 开始----
+
+      function LoadingGoods() {  
+      
+        $.ajax({
+
+          url: "{:url('index/ajax_load_data')}",
+
+          type: "POST",
+
+          dataType: "json",
+
+          data: {'Page': pageNo, 'Limit': limit },
+
+          success: function (result) {
+       
+            if (result.status==1) {
+              
+              var count = result.count;
+
+              var data = result.data;
+
+              totalRecords = count;
+
+              totalPage = Math.ceil(count / limit);
+               
+              if (count > 0) {
+
+                $(".commodity_volume").html("");
+
+                var str = "";
+
+                for (var i = 0; i < data.length; i++) {
+
+                  str += "<p class='commodity'></p>";
+
+                }
+                for(var item in data)
+                {
+                    if(data[item]['thumbimage']=='')
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                    var html = '';
+                        html+= '<div class="blogs" data-scroll-reveal="enter bottom over 1s"  >';
+                        html+= '<h3 class="blogtitle"><a href="/" target="_blank">'+data[item]['title']+'</a></h3>';
+                        html+= '<span class="blogpic"><a href="/" title=""><img src="home/images/toppic01.jpg" alt=""></a></span>';
+                        html+= '<p class="blogtext">'+data[item]['content']+'</p>';
+                        html+= '<div class="bloginfo">';
+                        html+= '<ul>';
+                        html+= '<li class="author"><a href="/">'+data[item]['author']['name']+'</a></li>';
+                        html+= '<li class="lmname"><a href="/">'+data[item]['category']['name']+'</a></li>';
+                        html+= '<li class="timer">'+data[item]['createtime']+'</li>';
+                        html+= '<li class="view"><span>'+data[item]['pageviews']+'</span>已阅读</li>';
+                        html+= '<li class="like">9999</li>';
+                        html+= '</ul>';
+                        html+= '</div>';
+                        html+= '</div>';
+                    $("#info").html(html);
+                }
+
+                $(".commodity_volume").html(str);
+
+              } else {
+
+                $(".commodity_volume").html("");
+
+                var str = "";
+
+                str = "<p><center>没有查到您想要的数据。</center></p>"
+
+                $(".commodity_volume").html(str);
+
+              }
+
+              //----分页部分 代码片段二 开始----
+
+              kkpager.total = totalPage;
+
+              kkpager.totalRecords = totalRecords;
+
+              kkpager.generPageHtml({
+
+                pno: pageNo,
+
+                //总页码
+
+                total: totalPage,
+
+                //总数据条数
+
+                totalRecords: totalRecords,
+
+                //mode: 'click',
+
+                //链接前部
+
+                hrefFormer: pagehref,
+
+                //链接尾部
+
+                hrefLatter: '',//hrefLatter: '.html'
+
+                getLink: function (n) {
+
+                  var hrefFormer = this.hrefFormer;
+                  var a = 1;
+                  var url = this.hrefFormer  + "?Page=" + a+'&Limit='+limit;//+ "?Page=" + n+'&Limit='+limit;
+
+                  if (hrefFormer.indexOf("pno") > 0) {
+                     
+                    var pno = GetQueryString("pno");
+
+                    return this.hrefFormer.replace('pno=' + pno, 'pno=' + n);
+
+                  } else {
+                   
+                    return url;
+
+                  }
+
+                }
+
+              });
+
+              //----分页部分 代码片段二 结束----
+
+              //----显示遮罩 开始----
+
+              $('#AjaxLoading').hide()
+
+              $(".showbox").stop(true).animate({ 'margin-top': '250px', 'opacity': '0' }, 400);
+
+              $(".overlay").css({ 'display': 'none', 'opacity': '0' });
+
+              //----显示遮罩 结束----
+
+            }
+
+          },
+
+          error: function () {
+
+            alert("请刷新后重试！")
+
+          }
+
+        });
+
+      } 
+
+      LoadingGoods();
+})
+      //----页面数据加载 并绑定生成分页 结束---- 
+   </script>
+
+
 {include file="common/foot" /}
 
 <a href="#" class="cd-top">Top</a>

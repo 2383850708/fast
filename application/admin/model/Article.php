@@ -25,6 +25,11 @@ class Article extends Model
     protected $append = [
 
     ];
+
+    public function getCreatetimeAttr($value,$data)
+    {
+        return date('Y-m-d',$data['createtime']);
+    }
 	
 	protected function setCreateIdAttr()
 	{
