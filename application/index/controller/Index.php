@@ -44,6 +44,7 @@ class Index extends Frontend
         $article = new \app\admin\model\Article;
         $where = [];
         $where['article.status'] = 'normal';
+        $start = ($params['Page']-1)*$params['Limit'];
         $total = $article
                 ->with(['admin','category','author'])
                 ->where($where)
@@ -53,12 +54,12 @@ class Index extends Frontend
                 ->with(['admin','category','author'])
                 ->where($where)
                 ->order('article.id', 'desc')
-                ->limit($params['Page'], $params['Limit'])
+                ->limit($start, $params['Limit'])
                 
                 ->select();
         foreach ($list as $row) 
         {
-            $row->visible(['id','title','author','keyword','content','flag','hits','thumbimage','pageviews','comment_count','status','createtime','updatetime']);
+            $row->visible(['id','title','author','summary','keyword','content','flag','hits','thumbimage','pageviews','comment_count','status','createtime','updatetime']);
             $row->visible(['admin']);
             $row->getRelation('admin')->visible(['username']);
             $row->visible(['category']);

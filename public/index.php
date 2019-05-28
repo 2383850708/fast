@@ -15,7 +15,7 @@
 //fastadmin版本号：1.0.0.2018
 
 define('APP_PATH', __DIR__ . '/../application/');
-
+define('BIND_MODULE','index');
 // 判断是否安装FastAdmin
 if (!is_file(APP_PATH . 'admin/command/Install/install.lock'))
 {
