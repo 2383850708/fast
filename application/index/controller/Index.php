@@ -20,8 +20,6 @@ class Index extends Frontend
 
     public function index()
     {
-
-
 		$banner = new \app\admin\model\Banner();
         $condition = [];
         $condition['status'] = 'normal';
@@ -44,6 +42,10 @@ class Index extends Frontend
         $article = new \app\admin\model\Article;
         $where = [];
         $where['article.status'] = 'normal';
+        if($params['category_id'])
+        {
+           $where['article.category_id'] = $params['category_id'];
+        }
         $start = ($params['Page']-1)*$params['Limit'];
         $total = $article
                 ->with(['admin','category','author'])
@@ -55,8 +57,8 @@ class Index extends Frontend
                 ->where($where)
                 ->order('article.id', 'desc')
                 ->limit($start, $params['Limit'])
-                
                 ->select();
+
         foreach ($list as $row) 
         {
             $row->visible(['id','title','author','summary','keyword','content','flag','hits','thumbimage','pageviews','comment_count','status','createtime','updatetime']);
@@ -67,7 +69,8 @@ class Index extends Frontend
             $row->visible(['author']);
             $row->getRelation('author')->visible(['name','id']);
         }
-        $list = collection($list)->toArray();
+
+        $list = collection($list)->append(['ThumbnailImage'])->toArray();
         $data = [];
         if ($list) 
         {

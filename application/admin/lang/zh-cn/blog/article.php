@@ -9,7 +9,7 @@ return [
     'Author'  =>  '作者',
     'Keyword'  =>  '关键字',
     'Hits'  =>  '点击量',
-    'Thumbimage'  =>  '缩略图地址',
+    'Thumbimage'  =>  '封面图标',
     'Pageviews'  =>  '浏览量',
     'Comment_count'  =>  '评论总数',
     'Status'  =>  '状态',

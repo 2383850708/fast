@@ -46,10 +46,11 @@ class Ajax extends Backend
      */
     public function upload()
     {
-        $type = input('param.type');
+        $thumbnail_type = input('param.type');
+
         Config::set('default_return_type', 'json');
         $file = $this->request->file('file');
-        print_r($file);exit;
+       
         if (empty($file)) {
             $this->error(__('No file upload or server upload limit exceeded'));
         }
@@ -61,6 +62,7 @@ class Ajax extends Backend
 
         preg_match('/(\d+)(\w+)/', $upload['maxsize'], $matches);
         $type = strtolower($matches[2]);
+
         $typeDict = ['b' => 0, 'k' => 1, 'kb' => 1, 'm' => 2, 'mb' => 2, 'gb' => 3, 'g' => 3];
         $size = (int)$upload['maxsize'] * pow(1024, isset($typeDict[$type]) ? $typeDict[$type] : 0);
         $fileInfo = $file->getInfo();
@@ -102,15 +104,11 @@ class Ajax extends Backend
         $splInfo = $file->validate(['size' => $size])->move(ROOT_PATH . '/public' . $uploadDir, $fileName);
         if ($splInfo) {
             
-          
-            if($upload['thumbnail'])
+            if($upload['thumbnail_'.$thumbnail_type])
             {
-                if($type=='banner')
-                {
-                   $image = \think\Image::open(ROOT_PATH . '/public' . $uploadDir . $splInfo->getSaveName());
+                $image = \think\Image::open(ROOT_PATH . '/public' . $uploadDir . $splInfo->getSaveName());
 
-                    $image->thumb($upload['thumbnail_width'], $upload['thumbnail_height'])->save(ROOT_PATH . '/public' . $uploadDir . 'thumb_'.$splInfo->getSaveName());
-                }  
+                $image->thumb($upload['thumbnail_'.$thumbnail_type.'_width'], $upload['thumbnail_'.$thumbnail_type.'_height'])->save(ROOT_PATH . '/public' . $uploadDir . 'thumb_'.$splInfo->getSaveName());
             }
 
             $imagewidth = $imageheight = 0;
@@ -137,9 +135,13 @@ class Ajax extends Backend
             $attachment->data(array_filter($params));
             $attachment->save();
             \think\Hook::listen("upload_after", $attachment);
-            $this->success(__('Upload successful'), null, [
-                'url' => $uploadDir . $splInfo->getSaveName()
-            ]);
+            $json_img = [];
+            $json_img['url'] = $uploadDir . $splInfo->getSaveName();
+            if($upload['thumbnail_'.$thumbnail_type])
+            {
+               $json_img['thumbnail_url'] = $uploadDir . 'thumb_'.$splInfo->getSaveName(); 
+            }
+            $this->success(__('Upload successful'), null, $json_img);
         } else {
             // 上传失败获取错误信息
             $this->error($file->getError());

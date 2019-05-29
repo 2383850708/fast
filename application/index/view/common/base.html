@@ -2,7 +2,7 @@
 <!--分页组件 JS CSS 开始-->
 
  <!--分页组件 CSS-->
-
+{block name="title_js"}
 <link rel="stylesheet" type="text/css" href="/home/kkpager/src/kkpager_blue.css" />
  <!--分页组件 JS-->
 
@@ -13,6 +13,8 @@
  <!--分页组件 JS CSS 结束-->
 
 <link rel='stylesheet'  href='/home/jiaoben6415/css/style.css' type='text/css' />
+{/block}
+
 <body>
 <header > 
 <div style="background: #d56464;">
@@ -38,15 +40,15 @@
     {present name="categorydata"}
       {volist name="categorydata" id="vo" key="k"}
           {if condition="$k eq 1"}
-              <li><a id="topnav_current" href="index.html">{$vo.name}</a>
+              <li><a id="topnav_current" data-id="{$vo.id}" href="index.html">{$vo.name}</a>
           {else /}
-              <li><a  href="index.html">{$vo.name}</a>
+              <li><a data-id="{$vo.id}"  href="index.html">{$vo.name}</a>
           {/if}
                 
           {present name="$vo.child"}
             <ul class="sub-nav">
             {volist name="vo.child" id="v"}
-               <li><a href="life.html">{$v.name}</a></li>
+               <li><a href="javascript:void(0)" onclick="category({$v.id})">{$v.name}</a></li>
             {/volist}
             </ul>
           {/present}
@@ -191,7 +193,7 @@
   <!--blogsbox end-->
   <script type="text/javascript">
 
-  $(function () {
+
 
       //----分页部分 代码片段一 开始----
 
@@ -200,6 +202,8 @@
       var totalRecords = 200;//总共多少条
 
       var pagehref = "{:url('index/ajax_load_data')}";
+
+      var category_id = '';
 
       //var pageNo = GetQueryString('pno');
      
@@ -226,7 +230,7 @@
 
           dataType: "json",
 
-          data: {'Page': pageNo, 'Limit': limit },
+          data: {'Page': pageNo, 'Limit': limit,'category_id':category_id },
 
           success: function (result) {
        
@@ -242,29 +246,24 @@
                
               if (count > 0) {
 
-                $(".commodity_volume").html("");
+                $("#info").html("");
 
-                var str = "";
-
-                for (var i = 0; i < data.length; i++) {
-
-                  str += "<p class='commodity'></p>";
-
-                }
                 var html = '';
                 for(var item in data)
                 {
-                    if(data[item]['thumbimage']=='')
+                    
+                    html+= '<div class="blogs" data-scroll-reveal="enter bottom over 1s"  >';
+                    html+= '<h3 class="blogtitle"><a href="'+data[item]['id']+'.html" target="_blank">'+data[item]['title']+'</a></h3>';
+                    if(data[item]['thumbimage']!='')
                     {
-
+                       html+= '<span class="blogpic"><a href="/" title=""><img src="'+data[item]['ThumbnailImage']+'" alt=""></a></span>';
                     }
                     else
                     {
-
+                       html+= '<span class="blogpic"><a href="/" title=""><img src="/home/images/toppic01.jpg" alt=""></a></span>';
                     }
-                    html+= '<div class="blogs" data-scroll-reveal="enter bottom over 1s"  >';
-                    html+= '<h3 class="blogtitle"><a href="'+data[item]['id']+'.html" target="_blank">'+data[item]['title']+'</a></h3>';
-                    html+= '<span class="blogpic"><a href="/" title=""><img src="/home/images/toppic01.jpg" alt=""></a></span>';
+                   
+
                     html+= '<p class="blogtext">'+data[item]['summary']+'</p>';
                     html+= '<div class="bloginfo">';
                     html+= '<ul>';
@@ -276,20 +275,21 @@
                     html+= '</ul>';
                     html+= '</div>';
                     html+= '</div>';
-                    $("#info").html(html);
+                    
                 }
-
-                $(".commodity_volume").html(str);
+                $("#info").html(html);
+               
 
               } else {
 
-                $(".commodity_volume").html("");
+                $('#kkpager').empty();
+                $("#info").html("");
 
                 var str = "";
 
                 str = "<p><center>没有查到您想要的数据。</center></p>"
 
-                $(".commodity_volume").html(str);
+                $("#info").html(str);
 
               }
 
@@ -349,6 +349,17 @@
               //----显示遮罩 结束----
 
             }
+            else
+            {
+                $('#kkpager').empty();
+                $("#info").html("");
+
+                var str = "";
+
+                str = "<p><center>没有查到您想要的数据。</center></p>"
+
+                $("#info").html(str);
+            }
 
           },
 
@@ -363,7 +374,13 @@
       } 
 
       LoadingGoods();
-})
+
+
+function category(id)
+{
+  category_id = id;
+  LoadingGoods();
+}
       //----页面数据加载 并绑定生成分页 结束---- 
    </script>
   {/block}
