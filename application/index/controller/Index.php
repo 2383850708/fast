@@ -4,6 +4,7 @@ namespace app\index\controller;
 
 use app\common\controller\Frontend;
 use app\common\library\Token;
+use think\Db;
 use Elasticsearch\ClientBuilder;
 class Index extends Frontend
 {
@@ -29,22 +30,39 @@ class Index extends Frontend
         {
             $banner_list = collection($banner_list)->append(['ImageThumb'])->toArray();
         }
-        
+
         $this->assign('banner_list',$banner_list);
         $this->assign('url',url('index/test'));
        
         return $this->view->fetch();
     }
 
+     private function getMenuPid($mid)
+    {
+        $condition = [];
+        $condition['type'] = 'blog';
+        $condition['id'] = $mid;
+        $menu = Db::name('category')->where($condition)->field('id,pid')->find();
+       
+        if($menu['pid'] != 0)
+        {
+                return $this->getMenuPid($menu['pid']); 
+        }
+        return $menu['id'];
+    }
+
     public function ajax_load_data()
     {
         $params = input('param.');
+
         $article = new \app\admin\model\Article;
         $where = [];
         $where['article.status'] = 'normal';
+        $dingji = 0;
         if($params['category_id'])
         {
            $where['article.category_id'] = $params['category_id'];
+           $dingji = $this->getMenuPid($params['category_id']);
         }
         $start = ($params['Page']-1)*$params['Limit'];
         $total = $article
@@ -69,9 +87,17 @@ class Index extends Frontend
             $row->visible(['author']);
             $row->getRelation('author')->visible(['name','id']);
         }
+        if($list)
+        {
+            $list = collection($list)->append(['ThumbnailImage'])->toArray();
+        }
+        else
+        {
+            $list = collection($list)->toArray();
+        }
 
-        $list = collection($list)->append(['ThumbnailImage'])->toArray();
         $data = [];
+        $data['dingji'] = $dingji;
         if ($list) 
         {
             $data['status'] = 1;
@@ -82,7 +108,7 @@ class Index extends Frontend
         {
             $data['status'] = 0;
         }
-        
+
         return json($data);
 
     }

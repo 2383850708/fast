@@ -19,7 +19,7 @@
     </div>
     <div class="tuijian">
       <h2 class="hometitle">推荐文章</h2>
-      <ul class="tjpic">
+      <!-- <ul class="tjpic">
         <i><img src="/home/images/toppic01.jpg"></i>
         <p><a href="/">别让这些闹心的套路，毁了你的网页设计</a></p>
       </ul>
@@ -36,7 +36,33 @@
         <li> <i><img src="/home/images/v2.jpg"></i>
           <p><a href="/">给我模板PSD源文件，我给你设计HTML！</a></p>
           <span>2018-05-13</span> </li>
-      </ul>
+      </ul> -->
+      {present name="hot_list"}
+          {volist name="hot_list" id="vo" key="k"}
+            {if condition="$k eq 1"}
+              <ul class="tjpic">
+                {if condition="$vo.thumbimage eq '' "}
+                  <i><img src="/home/images/toppic01.jpg"></i>
+                {else /}
+                  <i><img src="{$vo.thumbimage}"></i>
+                {/if}
+                <p><a href="{$vo.id}.html" target="_blank">{$vo.title}</a></p>
+              </ul>
+            {else /}
+               <ul class="sidenews">
+                <li>
+                  {if condition="$vo.thumbimage eq '' "}
+                    <i><img src="/home/images/toppic01.jpg"></i>
+                  {else /}
+                    <i><img src="{$vo.thumbimage}"></i>
+                  {/if} 
+                  <p><a href="{$vo.id}.html" target="_blank">{$vo.title}</a></p>
+                  <span>{$vo.createtime}</span> 
+                </li>
+              </ul>
+            {/if}
+          {/volist}
+        {/present}
     </div>
     <div class="tuijian">
       <h2 class="hometitle">点击排行</h2>
@@ -62,7 +88,12 @@
     <div class="cloud">
       <h2 class="hometitle">标签云</h2>
       <ul>
-        <a href="/">陌上花开</a> <a href="/">校园生活</a> <a href="/">html5</a> <a href="/">SumSung</a> <a href="/">青春</a> <a href="/">温暖</a> <a href="/">阳光</a> <a href="/">三星</a><a href="/">索尼</a> <a href="/">华维荣耀</a> <a href="/">三星</a> <a href="/">索尼</a>
+        {present name="tags"}
+          {volist name="tags" id="vo"}
+             <a href="/">{$vo.name}（{$vo.num}）</a>
+          {/volist}
+        {/present}
+  
       </ul>
     </div>
     <div class="links">

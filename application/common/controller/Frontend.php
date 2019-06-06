@@ -8,6 +8,7 @@ use think\Controller;
 use think\Hook;
 use think\Lang;
 use think\Cache;
+use think\Db;
 use fast\Category;
 
 /**
@@ -136,7 +137,16 @@ class Frontend extends Controller
 		}
 
 		$this->assign('categorydata',$CategoryList);
-				
+		$tags = Db::name('tag')->select();
+        $this->assign('tags',$tags);	
+
+        $article = model('app\admin\model\Article');
+        //特别推荐
+        $condition = [];
+        $condition['flag'] = ['like','%recommend%'];
+        $hot_list = $article->where($condition)->field('id,title,thumbimage,createtime')->limit(5)->select();
+
+        $this->assign('hot_list',$hot_list);
         Config::set('upload', array_merge(Config::get('upload'), $upload));
 		
         // 配置信息后

@@ -233,7 +233,11 @@
           data: {'Page': pageNo, 'Limit': limit,'category_id':category_id },
 
           success: function (result) {
-       
+            if(result.dingji!=0)
+            {
+              $('a[id="topnav_current"]').removeAttr('id');
+              $('a[data-id="'+result.dingji+'"]').attr('id','topnav_current');
+            }
             if (result.status==1) {
               
               var count = result.count;
