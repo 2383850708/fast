@@ -42,7 +42,7 @@
           {if condition="$k eq 1"}
               <li><a id="topnav_current" data-id="{$vo.id}" href="index.html">{$vo.name}</a>
           {else /}
-              <li><a data-id="{$vo.id}"  href="index.html">{$vo.name}</a>
+              <li><a data-id="{$vo.id}"  href="{$vo.url}">{$vo.name}</a>
           {/if}
                 
           {present name="$vo.child"}

@@ -114,7 +114,7 @@ class Frontend extends Controller
             $condition = [];
             $condition['type'] = 'blog';
 
-            $dataList = collection($category->where($condition)->order('weigh desc,id desc')->field('id,name,pid,type,flag')->select())->toArray();
+            $dataList = collection($category->where($condition)->order('weigh desc,id desc')->field('id,name,pid,type,flag,url')->select())->toArray();
 
             $Category = new Category($dataList);
             $CategoryList = $Category->leaf();
@@ -127,7 +127,7 @@ class Frontend extends Controller
 			$condition = [];
 			$condition['type'] = 'blog';
 
-			$dataList = collection($category->where($condition)->order('weigh desc,id desc')->field('id,name,pid,type,flag')->select())->toArray();
+			$dataList = collection($category->where($condition)->order('weigh desc,id desc')->field('id,name,pid,type,flag,url')->select())->toArray();
 			
 			$Category = new Category($dataList);
 			$CategoryList = $Category->leaf();
