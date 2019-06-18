@@ -22,7 +22,7 @@
   <div class="yusi-logo">
     <a href="/">
       <h1>
-        <span class="yusi-mono">深水鱼</span>
+        <span class="yusi-mono">{$site.name}</span>
         <span class="yusi-bloger">的个人博客</span>
       </h1>
     </a>
@@ -196,6 +196,7 @@
 
 
       //----分页部分 代码片段一 开始----
+      var tag = '{$tag}';
 
       var totalPage = 20;//总共多少页
 
@@ -207,7 +208,7 @@
 
       //var pageNo = GetQueryString('pno');
      
-      var limit = 1;
+      var limit = 20;
       var pageNo = '';
 
       if (!pageNo) {
@@ -230,7 +231,7 @@
 
           dataType: "json",
 
-          data: {'Page': pageNo, 'Limit': limit,'category_id':category_id },
+          data: {'Page': pageNo, 'Limit': limit,'category_id':category_id,'tag':tag },
 
           success: function (result) {
             if(result.dingji!=0)
@@ -383,6 +384,7 @@
 function category(id)
 {
   category_id = id;
+  tag = '';
   LoadingGoods();
 }
       //----页面数据加载 并绑定生成分页 结束---- 

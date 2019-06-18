@@ -35,6 +35,7 @@ class Config extends Backend
     {
         $siteList = [];
         $groupList = ConfigModel::getGroupList();
+        
         foreach ($groupList as $k => $v) {
             $siteList[$k]['name'] = $k;
             $siteList[$k]['title'] = $v;

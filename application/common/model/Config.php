@@ -79,9 +79,11 @@ class Config extends Model
     public static function getGroupList()
     {
         $groupList = config('site.configgroup');
+       
         foreach ($groupList as $k => &$v) {
             $v = __($v);
         }
+       
         return $groupList;
     }
 

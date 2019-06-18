@@ -21,6 +21,7 @@ class Index extends Frontend
 
     public function index()
     {
+       
 		$banner = new \app\admin\model\Banner();
         $condition = [];
         $condition['status'] = 'normal';
@@ -33,7 +34,15 @@ class Index extends Frontend
 
         $this->assign('banner_list',$banner_list);
         $this->assign('url',url('index/test'));
-       
+        if(input('?param.tag'))
+        {
+          $this->assign('tag',input('param.tag'));  
+        }
+        else
+        {
+        $this->assign('tag','');
+        }
+        
         return $this->view->fetch();
     }
 
@@ -58,6 +67,11 @@ class Index extends Frontend
         $article = new \app\admin\model\Article;
         $where = [];
         $where['article.status'] = 'normal';
+        if($params['tag']!='')
+        {
+            $where['article.keyword'] = ['like','%'.$params['tag'].'%'];
+        }
+       
         $dingji = 0;
         if($params['category_id'])
         {

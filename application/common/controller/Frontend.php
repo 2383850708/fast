@@ -154,7 +154,7 @@ class Frontend extends Controller
         Hook::listen("config_init", $config);
         // 加载当前控制器语言包
         $this->loadlang($controllername);
-	
+	  
         $this->assign('site', $site);
         $this->assign('config', $config);
     }
