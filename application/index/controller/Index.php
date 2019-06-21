@@ -46,6 +46,22 @@ class Index extends Frontend
         return $this->view->fetch();
     }
 
+    public function _getchildren($data,$catid)
+    {
+        static $res=array();
+        foreach($data as $k=>$v){
+            //判断该条数据的pid 是否等于当前 id
+            if($v['pid']==$catid){
+            //将该条数据保存在静态变量中
+                $res[]=$v['id'];
+                //继续将查询出的数据中id代入递归中继续操作
+                $this->_getchildren($data,$v['id']);
+            }
+        }
+        return $res;
+    }
+
+
      private function getMenuPid($mid)
     {
         $condition = [];
@@ -75,7 +91,11 @@ class Index extends Frontend
         $dingji = 0;
         if($params['category_id'])
         {
-           $where['article.category_id'] = $params['category_id'];
+           $category = Db::name('category')->where(['status'=>'normal'])->select();
+           $childs = $this->_getchildren($category,$params['category_id']);
+           $childs[] = $params['category_id'];
+           $where['article.category_id'] = ['in',array_values($childs)];
+           
            $dingji = $this->getMenuPid($params['category_id']);
         }
         $start = ($params['Page']-1)*$params['Limit'];
@@ -84,6 +104,7 @@ class Index extends Frontend
                 ->where($where)
                 //->fetchSql(true)
                 ->count();
+               
         $list = $article
                 ->with(['admin','category','author'])
                 ->where($where)

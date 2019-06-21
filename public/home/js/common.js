@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     //检测ie 6789
+    
     if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
         window.scrollReveal = new scrollReveal({reset: true});
     }
@@ -11,6 +12,13 @@
          $(this).css('background','#4a4a4a');
         $(this).children('ul').stop(true, true).slideUp();
     });
+
+    $('.sub-nav>li').hover(function(){
+        $(this).children('ul').stop(true, true).slideDown();
+    },function(){
+        $(this).children('ul').stop(true, true).slideUp();
+    })
+
     /*search*/
     $('.search_ico').click(function () {
         $('.search_bar').toggleClass('search_open');

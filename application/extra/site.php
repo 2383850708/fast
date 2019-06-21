@@ -39,5 +39,4 @@ return array (
   'personal_qq' => '2383850708',
   'personal_email' => '2383850708@qq.com',
   'personal_weixin' => 'wyku17',
-  'yuming' => '@1j212112',
 );

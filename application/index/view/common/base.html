@@ -48,7 +48,15 @@
           {present name="$vo.child"}
             <ul class="sub-nav">
             {volist name="vo.child" id="v"}
-               <li><a href="javascript:void(0)" onclick="category({$v.id})">{$v.name}</a></li>
+               <li><a href="javascript:void(0)" onclick="category({$v.id})">{$v.name}</a>
+                  {present name="$v.child"}
+                  <ul class="sub-nav-three">
+                    {volist name="v.child" id="three"}
+                     <li><a href="javascript:void(0)" onclick="category({$three.id})">{$three.name}</a>
+                    {/volist}
+                  </ul>
+                  {/present}
+               </li>
             {/volist}
             </ul>
           {/present}
@@ -103,7 +111,6 @@
             <li><a target="_blank" href="{$vo.url}"><img title="{$vo.title}" src="{$vo.image}" /></a></li>
           {/volist}
         {/present}
-        
       </ul>
       </div>
       <div class="ws_thumbs">
@@ -113,11 +120,11 @@
             <a target="_blank" href="#"><img src="{$vo.ImageThumb}" /></a>
           {/volist}
       {/present}
-      
       </div>
       </div>
       <div class="ws_shadow"></div>
-    </div>  </div>
+    </div>  
+  </div>
   
   <div style="height:20px;"></div>
     <div id="tmp"></div>
@@ -236,9 +243,12 @@
           success: function (result) {
             if(result.dingji!=0)
             {
+              $("html,body").animate({scrollTop:320},2000);
               $('a[id="topnav_current"]').removeAttr('id');
               $('a[data-id="'+result.dingji+'"]').attr('id','topnav_current');
             }
+            //$(document).scrollTop(300);
+            
             if (result.status==1) {
               
               var count = result.count;
@@ -292,7 +302,7 @@
 
                 var str = "";
 
-                str = "<p><center>没有查到您想要的数据。</center></p>"
+                str = "<p><center style='font-size:20px;background:white;padding:10px 0px'>没有查到您想要的数据</center></p>"
 
                 $("#info").html(str);
 
@@ -361,7 +371,7 @@
 
                 var str = "";
 
-                str = "<p><center>没有查到您想要的数据。</center></p>"
+                str = "<p><center style='font-size:20px;background:white;padding:10px 0px'>没有查到您想要的数据</center></p>"
 
                 $("#info").html(str);
             }

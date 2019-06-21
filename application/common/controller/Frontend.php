@@ -135,7 +135,7 @@ class Frontend extends Controller
 			//Cache::set('category',$CategoryList,3600);
 			//$categorydata = Cache::get('category','');
 		}
-
+       
 		$this->assign('categorydata',$CategoryList);
 		$tags = Db::name('tag')->select();
         $this->assign('tags',$tags);	

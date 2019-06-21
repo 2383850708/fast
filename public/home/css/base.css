@@ -151,6 +151,11 @@ header { position: fixed; top: 0; z-index: 99999 }
 .nav>li>.sub-nav>li>a { font-size: 16px; color: #FFFFFF;display:inline-block;width:110px;padding:10px 0px 10px 20px; position : relative;opacity:1;}
 .nav li .sub-nav li a:hover { background-color:rgba(87,102,99,0.8); }
 
+/*nav>three*/
+.nav li .sub-nav-three { position: absolute; top: 0px;left:130px;background: #d56464;  display: none;background-color:rgba(205,55,0,0.7);}
+.nav li .sub-nav-three li { clear: left;  position: relative;width:130px;}
+.nav>li>.sub-nav>li>.sub-nav-three>li a { font-size: 16px; color: #FFFFFF;display:inline-block;width:110px;padding:10px 0px 10px 20px; position : relative;opacity:1;}
+.nav>li>.sub-nav>li>.sub-nav-three>li a:hover { background-color:rgba(87,102,99,0.8); }
 
 #topnav_current { background: #d56464; }
 /*search*/
