@@ -114,7 +114,7 @@ class Index extends Frontend
 
         foreach ($list as $row) 
         {
-            $row->visible(['id','title','author','summary','keyword','content','flag','hits','thumbimage','pageviews','comment_count','status','createtime','updatetime']);
+            $row->visible(['id','title','author','summary','keyword','content','flag','hits','like','thumbimage','pageviews','comment_count','status','createtime','updatetime']);
             $row->visible(['admin']);
             $row->getRelation('admin')->visible(['username']);
             $row->visible(['category']);

@@ -191,7 +191,10 @@
     <p id="kkpager"></p>
   </div>
   {/block}
-  {include file="common/left" /}
+  
+  {block name="right"}
+  {include file="common/right" /}
+  {/block}
   {block name="js"}
   <script type="text/javascript" src="/home/jiaoben6415/js/slider.js"></script>
   <script type="text/javascript">
@@ -286,7 +289,7 @@
                     html+= '<li class="lmname"><a href="/">'+data[item]['category']['name']+'</a></li>';
                     html+= '<li class="timer">'+data[item]['createtime']+'</li>';
                     html+= '<li class="view"><span>'+data[item]['pageviews']+'</span>已阅读</li>';
-                    html+= '<li class="like">9999</li>';
+                    html+= '<li class="like">'+data[item]['like']+'</li>';
                     html+= '</ul>';
                     html+= '</div>';
                     html+= '</div>';

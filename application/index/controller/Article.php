@@ -4,6 +4,8 @@ namespace app\index\controller;
 
 use app\common\controller\Frontend;
 use app\common\library\Token;
+use think\Db;
+use think\Request;
 
 class Article extends Frontend
 {
@@ -36,7 +38,9 @@ class Article extends Frontend
      * @DateTime 2019-05-28
      */
     public function info()
-    {
+    {   
+        /*$request = Request::instance();
+        echo $request->ip();exit;*/
     	$params = input('param.');
         $where = [];
         $where['article.id'] = $params['id'];
@@ -65,6 +69,15 @@ class Article extends Frontend
         $this->assign('next',$next);
         
     	return $this->view->fetch();
+    }
+
+    public function like()
+    {
+        $params = input('param.');
+
+        $res = Db::name('article')->where('id', $params['id'])->setInc('like');
+
+        return json(1);
     }
 }
 

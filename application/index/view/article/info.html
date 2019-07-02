@@ -39,14 +39,14 @@
       </div>
     </div>
     <div class="share">
-      <p class="diggit"><a href="JavaScript:void(0);"> 很赞哦！ </a>(<b id="diggnum">{$list.like}</b>)</p>
+      <p class="diggit"><a href="JavaScript:void(0);" onclick="like({$list.id})"> 很赞哦！ </a>(<b id="diggnum">{$list.like}</b>)</p>
       <p class="dasbox"><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏本站</a></p>
       <div class="hide_box"></div>
       <div class="shang_box"> <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">关闭</a>
         <div class="shang_tit">
           <p>感谢您的支持，我会继续努力的!</p>
         </div>
-        <div class="shang_payimg"> <img src="/home/images/alipayimg.jpg" alt="扫码支持" title="扫一扫"> </div>
+        <div class="shang_payimg"> <img src="/home/images/alipayimg.png" alt="扫码支持" title="扫一扫"> </div>
         <div class="pay_explain">扫码打赏，你说多少就多少</div>
         <div class="shang_payselect">
           <div class="pay_item checked" data-id="alipay"> <span class="radiobox"></span> <span class="pay_logo"><img src="/home/images/alipay.jpg" alt="支付宝"></span> </div>
@@ -57,13 +57,36 @@
       $(".pay_item").click(function(){
         $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
         var dataid=$(this).attr('data-id');
-        $(".shang_payimg img").attr("src","images/"+dataid+"img.jpg");
+        console.log(dataid);
+        $(".shang_payimg img").attr("src","/home/images/"+dataid+"img.png");
         $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
       });
     });
     function dashangToggle(){
       $(".hide_box").fadeToggle();
       $(".shang_box").fadeToggle();
+    }
+
+    function like(id)
+    {
+      var like =$('#diggnum').html();
+
+      $.ajax({
+        url: "{:url('article/like')}",
+
+          type: "POST",
+
+          dataType: "json",
+
+          data: {'id': id},
+
+          success: function (result) 
+          {
+            alert('感谢您的支持，我会继续努力的');
+            $('#diggnum').html(Number(like)+1);
+            $('.like').html(Number(like)+1);
+          }
+      })
     }
     </script> 
       </div>
