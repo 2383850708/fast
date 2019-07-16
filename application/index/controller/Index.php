@@ -21,7 +21,6 @@ class Index extends Frontend
 
     public function index()
     {
-       
 		$banner = new \app\admin\model\Banner();
         $condition = [];
         $condition['status'] = 'normal';

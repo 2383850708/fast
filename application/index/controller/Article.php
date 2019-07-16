@@ -73,11 +73,28 @@ class Article extends Frontend
 
     public function like()
     {
+        $root = [];
         $params = input('param.');
+        $condition = [];
+        $condition['article_id'] = $params['id'];
+        $condition['ip'] = request()->ip();
+        $res = Db::name('ip_record')->where($condition)->find();
+        if($res)
+        {
+            $root['status'] = 0;
+            $root['msg'] = '您已提交过';
+            return json($root);
+        }
 
-        $res = Db::name('article')->where('id', $params['id'])->setInc('like');
-
-        return json(1);
+        Db::name('article')->where('id', $params['id'])->setInc('like');
+        $data = [];
+        $data['ip'] = request()->ip();
+        $data['article_id'] = $params['id'];
+        $data['createtime'] = time();
+        Db::name('ip_record')->insert($data);
+        $root['status'] = 1;
+        $root['msg'] = '感谢您的支持，我会继续努力的';
+        return json($root);
     }
 }
 

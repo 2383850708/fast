@@ -82,9 +82,12 @@
 
           success: function (result) 
           {
-            alert('感谢您的支持，我会继续努力的');
-            $('#diggnum').html(Number(like)+1);
-            $('.like').html(Number(like)+1);
+            if(result.status==1)
+            {
+              $('#diggnum').html(Number(like)+1);
+              $('.like').html(Number(like)+1);
+            }
+            alert(result.msg);
           }
       })
     }
