@@ -41,7 +41,7 @@ class Index extends Frontend
         {
         $this->assign('tag','');
         }
-        
+        $this->assign('category_id','');
         return $this->view->fetch();
     }
 

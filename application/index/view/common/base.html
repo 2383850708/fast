@@ -40,19 +40,23 @@
     {present name="categorydata"}
       {volist name="categorydata" id="vo" key="k"}
           {if condition="$k eq 1"}
-              <li><a id="topnav_current" data-id="{$vo.id}" href="index.html">{$vo.name}</a>
+              <li><a id="topnav_current" data-id="{$vo.id}" href="/">{$vo.name}</a>
           {else /}
-              <li><a data-id="{$vo.id}"  href="{$vo.url}">{$vo.name}</a>
+              {present name="$vo.url"}
+              <li><a data-id="{$vo.id}"  href="/{$vo.url}">{$vo.name}</a>
+              {else /}
+              <li><a data-id="{$vo.id}"  href="javascript:void(0)">{$vo.name}</a>
+              {/present}
           {/if}
                 
           {present name="$vo.child"}
             <ul class="sub-nav">
             {volist name="vo.child" id="v"}
-               <li><a href="javascript:void(0)" onclick="category({$v.id})">{$v.name}</a>
+               <li><a href="/category?id={$v.id}" >{$v.name}</a>
                   {present name="$v.child"}
                   <ul class="sub-nav-three">
                     {volist name="v.child" id="three"}
-                     <li><a href="javascript:void(0)" onclick="category({$three.id})">{$three.name}</a>
+                     <li><a href="/category?id={$three.id}" >{$three.name}</a>
                     {/volist}
                   </ul>
                   {/present}
@@ -82,7 +86,7 @@
   <div style="background-color: #eee;">
     <div class="speedbar">
       <div class="pull-right">
-          <i class="fa fa-user" style="opacity:0.5;filter:alpha(opacity=50);"></i> <a href="javascript:alert('暂未开放')">投稿</a>&nbsp;&nbsp;&nbsp;   <i class="fa fa-power-off" style="opacity:0.5;filter:alpha(opacity=50);"></i> <a href="https://cuiqingcai.com/wp-login.php">登录</a>
+          <i class="fa fa-user" style="opacity:0.5;filter:alpha(opacity=50);"></i> <a href="javascript:alert('暂未开放')">投稿</a>&nbsp;&nbsp;&nbsp;   <i class="fa fa-power-off" style="opacity:0.5;filter:alpha(opacity=50);"></i> <a href="javascript:alert('暂未开放')">登录</a>
       </div>
       <div class="toptip">
         <strong class="text-success"><i class="fa fa-volume-up" style="color:#56af45"></i> </strong> &nbsp; 《Python3网络爬虫开发实战》赠书活动正在进行中！详情请戳<a href="https://cuiqingcai.com/6173.html">赠书活动</a>！欢迎参与！非常感谢！
@@ -214,7 +218,7 @@
 
       var pagehref = "{:url('index/ajax_load_data')}";
 
-      var category_id = '';
+      var category_id = '{$category_id}';
 
       //var pageNo = GetQueryString('pno');
      
@@ -246,7 +250,7 @@
           success: function (result) {
             if(result.dingji!=0)
             {
-              $("html,body").animate({scrollTop:320},2000);
+              //$("html,body").animate({scrollTop:320},2000);
               $('a[id="topnav_current"]').removeAttr('id');
               $('a[data-id="'+result.dingji+'"]').attr('id','topnav_current');
             }
@@ -360,7 +364,7 @@
 
               $('#AjaxLoading').hide()
 
-              $(".showbox").stop(true).animate({ 'margin-top': '250px', 'opacity': '0' }, 400);
+              //$(".showbox").stop(true).animate({ 'margin-top': '250px', 'opacity': '0' }, 400);
 
               $(".overlay").css({ 'display': 'none', 'opacity': '0' });
 

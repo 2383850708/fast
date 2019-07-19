@@ -41,9 +41,11 @@ class Article extends Frontend
     {   
         /*$request = Request::instance();
         echo $request->ip();exit;*/
+
     	$params = input('param.');
         $where = [];
         $where['article.id'] = $params['id'];
+        Db::name('article')->where('id', $params['id'])->setInc('pageviews');
         $article = new \app\admin\model\Article;
         $list = $article
                 ->with(['admin','category','author'])

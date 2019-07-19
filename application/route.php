@@ -26,6 +26,7 @@
 use think\Route;
 // 注册路由到index模块的News控制器的read操作
 Route::get(':id','index/Article/info',['ext'=>'html'],['id'=>'\d+']);
-
+Route::get('index/:id','index/Index/index',['ext'=>'html'],['id'=>'\d+']);
+Route::get('category:id','index/Category/index',['ext'=>'html'],['id'=>'\d+']);
 
 

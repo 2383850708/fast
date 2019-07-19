@@ -95,10 +95,10 @@
 }
 
 #kkpager .pageBtnWrap{
-	float:left;
+	float:right;
 }
 #kkpager .infoTextAndGoPageBtnWrap{
-	float:right;
+	float:left;
 }
 #kkpager .spanDot{
 	float:left;
