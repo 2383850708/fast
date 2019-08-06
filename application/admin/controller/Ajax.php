@@ -46,7 +46,14 @@ class Ajax extends Backend
      */
     public function upload()
     {
-        $thumbnail_type = input('param.type');
+		if(input('?param.type'))
+		{
+			$thumbnail_type = input('param.type');
+		}
+		else
+		{
+			$thumbnail_type = '';
+		}
 
         Config::set('default_return_type', 'json');
         $file = $this->request->file('file');
@@ -104,7 +111,7 @@ class Ajax extends Backend
         $splInfo = $file->validate(['size' => $size])->move(ROOT_PATH . '/public' . $uploadDir, $fileName);
         if ($splInfo) {
             
-            if($upload['thumbnail_'.$thumbnail_type])
+            if(array_key_exists('thumbnail_'.$thumbnail_type, $upload) )
             {
                 $image = \think\Image::open(ROOT_PATH . '/public' . $uploadDir . $splInfo->getSaveName());
 
@@ -137,7 +144,7 @@ class Ajax extends Backend
             \think\Hook::listen("upload_after", $attachment);
             $json_img = [];
             $json_img['url'] = $uploadDir . $splInfo->getSaveName();
-            if($upload['thumbnail_'.$thumbnail_type])
+            if(array_key_exists('thumbnail_'.$thumbnail_type, $upload))
             {
                $json_img['thumbnail_url'] = $uploadDir . 'thumb_'.$splInfo->getSaveName(); 
             }

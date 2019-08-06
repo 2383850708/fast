@@ -26,12 +26,12 @@ return [
      * 是否支持批量上传
      */
     'multiple'  => false,
-    /*是否开启缩略图*/
+    /*banner是否开启缩略图*/
     'thumbnail_banner' => true,
     'thumbnail_banner_width' =>'120',
     'thumbnail_banner_height' =>'120',
 
-    /*是否开启缩略图*/
+    /*文章是否开启缩略图*/
     'thumbnail_article' => true,
     'thumbnail_article_width' =>'200',
     'thumbnail_article_height' =>'123',
